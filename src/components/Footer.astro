@@ -1,0 +1,116 @@
+---
+const today = new Date();
+---
+
+<footer>
+	<div class="footer-content">
+		<div class="brand">
+			<span class="lightning">⚡</span> KÖD
+			<p>Noticias de IA, Tech y Marketing Digital que importan.</p>
+		</div>
+		
+		<div class="links">
+			<h4>Categorías</h4>
+			<a href="/categorias/ia">Inteligencia Artificial</a>
+			<a href="/categorias/negocios">Negocios</a>
+			<a href="/categorias/tech">Tecnología</a>
+			<a href="/categorias/marketing">Marketing Digital</a>
+		</div>
+		
+		<div class="social">
+			<h4>Síguenos</h4>
+			<a href="https://instagram.com/wearekod" target="_blank">Instagram</a>
+			<a href="https://twitter.com/wearekod" target="_blank">Twitter/X</a>
+			<a href="https://tiktok.com/@wearekod" target="_blank">TikTok</a>
+		</div>
+	</div>
+	
+	<div class="copyright">
+		<p>&copy; {today.getFullYear()} KÖD. Todos los derechos reservados.</p>
+		<p>Hecho con ⚡ por <a href="https://instagram.com/wearekod" target="_blank">@wearekod</a></p>
+	</div>
+</footer>
+
+<style>
+	footer {
+		background: #1A1A1A;
+		border-top: 1px solid #374151;
+		padding: 3em 1em 2em;
+		margin-top: 4em;
+	}
+	
+	.footer-content {
+		max-width: 1000px;
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: 2fr 1fr 1fr;
+		gap: 3em;
+		padding-bottom: 2em;
+		border-bottom: 1px solid #374151;
+	}
+	
+	.brand {
+		font-size: 1.5em;
+		font-weight: 700;
+		color: white;
+	}
+	
+	.brand p {
+		font-size: 0.6em;
+		font-weight: 400;
+		color: #9CA3AF;
+		margin-top: 0.5em;
+	}
+	
+	.lightning {
+		color: #7C6AEF;
+	}
+	
+	.links, .social {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5em;
+	}
+	
+	.links h4, .social h4 {
+		color: white;
+		font-size: 0.9em;
+		margin-bottom: 0.5em;
+	}
+	
+	.links a, .social a {
+		color: #9CA3AF;
+		text-decoration: none;
+		font-size: 0.9em;
+		transition: color 0.2s ease;
+	}
+	
+	.links a:hover, .social a:hover {
+		color: #7C6AEF;
+	}
+	
+	.copyright {
+		max-width: 1000px;
+		margin: 0 auto;
+		padding-top: 2em;
+		text-align: center;
+	}
+	
+	.copyright p {
+		color: #6B7280;
+		font-size: 0.85em;
+		margin: 0.25em 0;
+	}
+	
+	.copyright a {
+		color: #7C6AEF;
+	}
+	
+	@media (max-width: 768px) {
+		.footer-content {
+			grid-template-columns: 1fr;
+			gap: 2em;
+			text-align: center;
+		}
+	}
+</style>

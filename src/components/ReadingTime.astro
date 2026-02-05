@@ -1,0 +1,33 @@
+---
+interface Props {
+  content: string;
+}
+
+const { content } = Astro.props;
+
+// Calculate reading time (average 200 words per minute)
+const words = content.split(/\s+/).length;
+const readingTime = Math.ceil(words / 200);
+---
+
+<span class="reading-time">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+    <circle cx="12" cy="12" r="10"/>
+    <path d="M12 6v6l4 2"/>
+  </svg>
+  {readingTime} min de lectura
+</span>
+
+<style>
+  .reading-time {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    font-size: 0.875rem;
+    color: #888;
+  }
+
+  .reading-time svg {
+    opacity: 0.7;
+  }
+</style>

@@ -1,0 +1,73 @@
+---
+title: 'SpaceX quiere que tu fondo de retiro financie su IPO'
+description: 'SpaceX presiona a Nasdaq y S&P para saltarse el periodo de espera y entrar directo a los índices bursátiles. La jugada financiera más audaz de Musk.'
+pubDate: 'Feb 05 2026'
+heroImage: '/images/spacex-ipo.png'
+category: 'Negocios'
+tags: ['SpaceX', 'IPO', 'Elon Musk', 'Finanzas', 'xAI']
+---
+
+## Qué está pasando
+
+SpaceX prepara un **IPO masivo** tras fusionarse con xAI y X.
+
+Pero hay un giro: están **presionando a Nasdaq y S&P para saltarse el periodo de espera normal** antes de entrar a los índices bursátiles.
+
+¿Por qué importa? Porque los fondos indexados compran automáticamente.
+
+## Cómo funciona
+
+Normalmente, una empresa debe esperar meses después de su IPO para entrar al S&P 500 o Nasdaq 100.
+
+**Pero si SpaceX logra entrada inmediata:**
+
+Los fondos indexados (401k, ETFs, fondos de retiro) **TIENEN que comprar acciones automáticamente**.
+
+Demanda garantizada. Precio inflado.
+
+## El contexto
+
+Recuerda:
+- **SpaceX** es rentable
+- **xAI** quema $1 billón USD al mes
+- **X (Twitter)** también pierde dinero
+
+Musk fusionó las 3 empresas.
+
+**Ahora quiere que tu fondo de retiro ayude a financiar sus pérdidas en IA.**
+
+## Por qué es controversial
+
+Críticos argumentan:
+
+- Es un bailout encubierto
+- Los pequeños inversionistas no tienen opción
+- Cambia las reglas del juego para favorecer a Musk
+- Puede inflar artificialmente la valoración
+
+**Los fondos indexados son el dinero de millones de trabajadores.**
+
+## Qué sigue
+
+Nasdaq ya está considerando crear reglas especiales para IPOs grandes como el de SpaceX.
+
+Si lo aprueban:
+- Otros tech billionaires van a querer lo mismo
+- Cambia el precedente para futuros IPOs
+- Los fondos de retiro tendrán menos control
+
+**El IPO podría ser el más grande de la historia.**
+
+## El takeaway
+
+Elon Musk no juega con las mismas reglas que todos.
+
+Y cuando el hombre más rico del mundo quiere cambiar las reglas del mercado financiero para financiar su carrera de IA...
+
+**Usualmente lo logra.**
+
+Mantente atento a este IPO.
+
+---
+
+*¿Quieres más análisis de negocios y finanzas tech? Síguenos en [@wearekod](https://instagram.com/wearekod)*

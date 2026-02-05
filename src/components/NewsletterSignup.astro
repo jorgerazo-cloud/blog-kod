@@ -1,0 +1,204 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { 
+  title = "¿Te gustó este artículo?",
+  description = "Suscríbete para recibir las últimas noticias de IA, marketing y tecnología directo en tu inbox."
+} = Astro.props;
+---
+
+<section class="newsletter-signup">
+  <div class="newsletter-content">
+    <div class="newsletter-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="32" height="32">
+        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+        <path d="M22 6l-10 7L2 6"/>
+      </svg>
+    </div>
+    <h3 class="newsletter-title">{title}</h3>
+    <p class="newsletter-description">{description}</p>
+    <form class="newsletter-form" id="newsletter-form">
+      <input 
+        type="email" 
+        name="email" 
+        placeholder="tu@email.com" 
+        required 
+        class="newsletter-input"
+      />
+      <button type="submit" class="newsletter-btn">
+        Suscribirme
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </button>
+    </form>
+    <p class="newsletter-privacy">
+      Sin spam. Cancela cuando quieras. 
+      <a href="/privacidad">Política de privacidad</a>
+    </p>
+  </div>
+  <div class="newsletter-decoration">
+    <div class="decoration-circle"></div>
+    <div class="decoration-circle small"></div>
+  </div>
+</section>
+
+<style>
+  .newsletter-signup {
+    position: relative;
+    margin: 4rem 0;
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, rgba(124, 106, 239, 0.15) 0%, rgba(124, 106, 239, 0.05) 100%);
+    border: 1px solid rgba(124, 106, 239, 0.3);
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .newsletter-content {
+    position: relative;
+    z-index: 1;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .newsletter-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    background: #7C6AEF;
+    border-radius: 16px;
+    margin-bottom: 1.5rem;
+    color: white;
+  }
+
+  .newsletter-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 0.75rem;
+  }
+
+  .newsletter-description {
+    color: #aaa;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0 0 1.5rem;
+  }
+
+  .newsletter-form {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .newsletter-input {
+    flex: 1;
+    padding: 0.875rem 1rem;
+    background: rgba(13, 13, 13, 0.8);
+    border: 1px solid rgba(124, 106, 239, 0.3);
+    border-radius: 10px;
+    color: white;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+  }
+
+  .newsletter-input::placeholder {
+    color: #666;
+  }
+
+  .newsletter-input:focus {
+    outline: none;
+    border-color: #7C6AEF;
+  }
+
+  .newsletter-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 1.5rem;
+    background: #7C6AEF;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+
+  .newsletter-btn:hover {
+    background: #6B5BD4;
+    transform: translateY(-2px);
+  }
+
+  .newsletter-privacy {
+    font-size: 0.8125rem;
+    color: #666;
+    margin: 0;
+  }
+
+  .newsletter-privacy a {
+    color: #7C6AEF;
+    text-decoration: none;
+  }
+
+  .newsletter-privacy a:hover {
+    text-decoration: underline;
+  }
+
+  .newsletter-decoration {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+  }
+
+  .decoration-circle {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(124, 106, 239, 0.1) 0%, transparent 70%);
+    top: -100px;
+    right: -100px;
+  }
+
+  .decoration-circle.small {
+    width: 150px;
+    height: 150px;
+    bottom: -50px;
+    left: -50px;
+    top: auto;
+    right: auto;
+  }
+
+  @media (max-width: 640px) {
+    .newsletter-form {
+      flex-direction: column;
+    }
+
+    .newsletter-btn {
+      justify-content: center;
+    }
+  }
+</style>
+
+<script>
+  const form = document.getElementById('newsletter-form');
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const email = new FormData(form).get('email');
+    // TODO: Connect to newsletter service
+    alert('¡Gracias por suscribirte! Te mantendremos informado.');
+    form.reset();
+  });
+</script>
