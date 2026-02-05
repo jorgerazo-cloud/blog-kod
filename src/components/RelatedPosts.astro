@@ -12,7 +12,7 @@ const { currentSlug, category, limit = 3 } = Astro.props;
 
 const allPosts = await getCollection('blog');
 const relatedPosts = allPosts
-  .filter(post => post.slug !== currentSlug)
+  .filter(post => post.id !== currentSlug)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
   .slice(0, limit);
 ---
@@ -28,7 +28,7 @@ const relatedPosts = allPosts
     </h3>
     <div class="related-grid">
       {relatedPosts.map((post) => (
-        <a href={`/blog/${post.slug}/`} class="related-card">
+        <a href={`/blog/${post.id}/`} class="related-card">
           {post.data.heroImage && (
             <div class="related-image">
               <img src={post.data.heroImage} alt="" loading="lazy" />
