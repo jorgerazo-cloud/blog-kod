@@ -2,9 +2,9 @@
 title: 'OpenAI retira GPT-4o de ChatGPT: Solo el 0.1% de usuarios lo usa'
 description: 'OpenAI anunció que retirará GPT-4o de ChatGPT el 13 de febrero de 2026. La velocidad de obsolescencia en IA es brutal.'
 pubDate: 'Feb 05 2026'
-heroImage: '/images/gpt4o-retiro.png'
+heroImage: '/images/posts/openai-gpt4o-retiro.webp'
 category: 'IA'
-tags: ['OpenAI', 'ChatGPT', 'GPT-4o', 'IA']
+tags: ['OpenAI', 'ChatGPT', 'GPT-4o', 'inteligencia artificial', 'modelos de lenguaje', 'GPT-5']
 ---
 
 ## La noticia

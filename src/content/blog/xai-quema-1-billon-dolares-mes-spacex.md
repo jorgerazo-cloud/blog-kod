@@ -2,9 +2,9 @@
 title: 'xAI quema $1 billón de dólares al mes: Musk fusiona SpaceX con xAI'
 description: 'Elon Musk anunció la fusión de SpaceX con xAI y X. ¿Otro caso de bailout de sí mismo?'
 pubDate: 'Feb 05 2026'
-heroImage: '/images/xai-spacex.png'
+heroImage: '/images/posts/xai-spacex-fusion.webp'
 category: 'Negocios'
-tags: ['Elon Musk', 'SpaceX', 'xAI', 'Grok', 'Negocios']
+tags: ['Elon Musk', 'SpaceX', 'xAI', 'Grok', 'fusiones y adquisiciones', 'inteligencia artificial', 'Tesla']
 ---
 
 ## La fusión sorpresa

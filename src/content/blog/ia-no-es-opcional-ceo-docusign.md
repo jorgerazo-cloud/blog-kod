@@ -2,9 +2,9 @@
 title: '"No ofrecer un servicio de IA ya no es una opción" - CEO de Docusign'
 description: 'Allan Thygesen, CEO de Docusign, advierte que la IA ya no es opcional para las empresas que quieren competir.'
 pubDate: 'Feb 05 2026'
-heroImage: '/images/docusign-ia.png'
+heroImage: '/images/posts/docusign-ia-obligatoria.webp'
 category: 'Negocios'
-tags: ['Docusign', 'IA', 'Negocios', 'Transformación Digital']
+tags: ['Docusign', 'inteligencia artificial', 'transformación digital', 'estrategia empresarial', 'SaaS', 'automatización']
 ---
 
 ## Quién lo dijo

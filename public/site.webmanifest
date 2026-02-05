@@ -1,0 +1,21 @@
+{
+  "name": "KÖD Blog - Noticias de IA y Tech",
+  "short_name": "KÖD Blog",
+  "description": "Noticias de IA, Tech y Marketing Digital que importan",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0D0D0D",
+  "theme_color": "#7C6AEF",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/logo.webp",
+      "sizes": "512x512",
+      "type": "image/webp",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["news", "technology", "business"],
+  "lang": "es-MX",
+  "dir": "ltr"
+}

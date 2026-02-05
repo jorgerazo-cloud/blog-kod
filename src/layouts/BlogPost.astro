@@ -16,19 +16,39 @@ type Props = CollectionEntry<'blog'>['data'] & {
   rawContent: string;
 };
 
-const { title, description, pubDate, updatedDate, heroImage, headings, slug, rawContent } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, headings, slug, rawContent, category, tags } = Astro.props;
 
 // Calculate reading time
 const words = rawContent?.split(/\s+/).length || 0;
 const readingTime = Math.ceil(words / 200);
 
 const fullUrl = `https://blog.wearekod.com/blog/${slug}/`;
+
+// Map category to section
+const sectionMap: Record<string, string> = {
+  'IA': 'Inteligencia Artificial',
+  'Negocios': 'Negocios',
+  'Tech': 'Tecnología',
+  'Marketing': 'Marketing Digital'
+};
+const section = category ? sectionMap[category] || category : 'Tecnología';
 ---
 
 <!doctype html>
 <html lang="es">
   <head>
-    <BaseHead title={`${title} | Blog KÖD`} description={description} image={heroImage} />
+    <BaseHead 
+      title={`${title} | Blog KÖD`} 
+      description={description} 
+      image={heroImage}
+      type="article"
+      publishedTime={pubDate}
+      modifiedTime={updatedDate}
+      author="KÖD Editorial"
+      section={section}
+      tags={tags || [category || 'IA', 'tecnología', 'noticias']}
+      slug={slug}
+    />
     <style>
       /* Hero Section */
       .hero {

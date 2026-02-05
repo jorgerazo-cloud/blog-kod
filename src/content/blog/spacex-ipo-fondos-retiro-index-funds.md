@@ -2,9 +2,9 @@
 title: 'SpaceX quiere que tu fondo de retiro financie su IPO'
 description: 'SpaceX presiona a Nasdaq y S&P para saltarse el periodo de espera y entrar directo a los índices bursátiles. La jugada financiera más audaz de Musk.'
 pubDate: 'Feb 05 2026'
-heroImage: '/images/spacex-ipo.png'
+heroImage: '/images/posts/spacex-ipo-index-funds.webp'
 category: 'Negocios'
-tags: ['SpaceX', 'IPO', 'Elon Musk', 'Finanzas', 'xAI']
+tags: ['SpaceX', 'IPO', 'Elon Musk', 'fondos de inversión', 'bolsa de valores', 'S&P 500', 'Nasdaq', 'finanzas personales']
 ---
 
 ## Qué está pasando
