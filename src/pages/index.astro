@@ -215,7 +215,7 @@ const getConfig = (cat: string) => categoryConfig[cat] || {
 					</a>
 				</div>
 				<div class="news-grid">
-					{allPosts.slice(0, 12).map((post) => (
+					{allPosts.map((post) => (
 						<article class="news-card">
 							<a href={`/blog/${post.id}/`}>
 								<div class="news-image">
