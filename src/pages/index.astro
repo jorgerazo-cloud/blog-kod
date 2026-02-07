@@ -6,9 +6,37 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 import { getCollection } from 'astro:content';
 import FormattedDate from '../components/FormattedDate.astro';
 
-const posts = (await getCollection('blog')).sort(
+const allPosts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
+
+// Featured posts (latest 3 for slider)
+const featuredPosts = allPosts.slice(0, 3);
+
+// Hot topics (next 4 posts)
+const hotTopics = allPosts.slice(3, 7);
+
+// Latest news (remaining posts)
+const latestNews = allPosts.slice(7);
+
+// Get unique categories
+const categories = [...new Set(allPosts.map(post => post.data.category).filter(Boolean))];
+
+// Category icons
+const categoryIcons: Record<string, string> = {
+	'IA': '🤖',
+	'Negocios': '💼',
+	'Tech': '💻',
+	'Marketing': '📈'
+};
+
+// Category colors
+const categoryColors: Record<string, string> = {
+	'IA': '#7C6AEF',
+	'Negocios': '#10B981',
+	'Tech': '#F59E0B',
+	'Marketing': '#EF4444'
+};
 ---
 
 <!doctype html>
@@ -19,359 +47,921 @@ const posts = (await getCollection('blog')).sort(
 	<body>
 		<Header />
 		<main>
-			<section class="hero">
-				<h1><span class="lightning">⚡</span> KÖD Blog</h1>
-				<p class="tagline">Noticias de IA, Tech y Marketing Digital que importan.</p>
-				<p class="handle">Por <a href="https://instagram.com/wearekod" target="_blank" rel="noopener">@wearekod</a></p>
-			</section>
-			
-			<section class="latest-posts">
-				<h2>Últimas noticias</h2>
-				<ul class="post-list">
-					{
-						posts.map((post) => (
-							<li>
-								<a href={`/blog/${post.id}/`} class="post-card">
-									<div class="post-card-header">
-										{post.data.category && (
-											<span class="category">{post.data.category}</span>
-										)}
-										<span class="date">
-											<FormattedDate date={post.data.pubDate} />
+			<!-- Breaking News Ticker -->
+			<div class="breaking-news">
+				<span class="breaking-label">⚡ ÚLTIMA HORA</span>
+				<div class="ticker-wrapper">
+					<div class="ticker">
+						{featuredPosts.map((post) => (
+							<a href={`/blog/${post.id}/`} class="ticker-item">{post.data.title}</a>
+						))}
+					</div>
+				</div>
+			</div>
+
+			<!-- Hero Slider -->
+			<section class="hero-slider">
+				<div class="slider-container">
+					{featuredPosts.map((post, index) => (
+						<article class={`slide ${index === 0 ? 'active' : ''}`} data-slide={index}>
+							<a href={`/blog/${post.id}/`} class="slide-link">
+								<div class="slide-image">
+									{post.data.heroImage && (
+										<img src={post.data.heroImage} alt={post.data.title} loading={index === 0 ? 'eager' : 'lazy'} />
+									)}
+									<div class="slide-overlay"></div>
+								</div>
+								<div class="slide-content">
+									{post.data.category && (
+										<span class="slide-category" style={`background: ${categoryColors[post.data.category] || '#7C6AEF'}`}>
+											{post.data.category}
 										</span>
+									)}
+									<h2 class="slide-title">{post.data.title}</h2>
+									<p class="slide-description">{post.data.description}</p>
+									<div class="slide-meta">
+										<FormattedDate date={post.data.pubDate} />
 									</div>
-									<h3>{post.data.title}</h3>
-									<p class="description">{post.data.description}</p>
-								</a>
-							</li>
-						))
-					}
-				</ul>
+								</div>
+							</a>
+						</article>
+					))}
+				</div>
+				<div class="slider-nav">
+					{featuredPosts.map((_, index) => (
+						<button class={`nav-dot ${index === 0 ? 'active' : ''}`} data-slide={index} aria-label={`Slide ${index + 1}`}></button>
+					))}
+				</div>
+				<button class="slider-arrow prev" aria-label="Anterior">‹</button>
+				<button class="slider-arrow next" aria-label="Siguiente">›</button>
 			</section>
-			
-			<section class="cta">
-				<h2>¿Quieres dominar la IA antes que tu competencia?</h2>
-				<p>Síguenos en redes para más noticias que importan.</p>
-				<div class="cta-buttons">
-					<a href="https://instagram.com/wearekod" target="_blank" rel="noopener" class="btn primary">
-						Seguir en Instagram
+
+			<!-- Categories Bar -->
+			<section class="categories-bar">
+				<div class="categories-scroll">
+					<a href="/blog" class="category-pill all">
+						<span class="cat-icon">📰</span>
+						<span>Todas</span>
 					</a>
-					<a href="/blog" class="btn secondary">
-						Ver todos
-					</a>
+					{categories.map((cat) => (
+						<a href={`/blog?category=${cat}`} class="category-pill" style={`--cat-color: ${categoryColors[cat] || '#7C6AEF'}`}>
+							<span class="cat-icon">{categoryIcons[cat] || '📄'}</span>
+							<span>{cat}</span>
+						</a>
+					))}
+				</div>
+			</section>
+
+			<!-- Hot Topics -->
+			<section class="hot-topics">
+				<div class="section-header">
+					<h2><span class="fire">🔥</span> Hot Topics</h2>
+					<a href="/blog" class="see-all">Ver todos →</a>
+				</div>
+				<div class="hot-grid">
+					{hotTopics.map((post, index) => (
+						<article class={`hot-card ${index === 0 ? 'featured' : ''}`}>
+							<a href={`/blog/${post.id}/`}>
+								<div class="hot-image">
+									{post.data.heroImage && (
+										<img src={post.data.heroImage} alt={post.data.title} loading="lazy" />
+									)}
+									<div class="hot-overlay"></div>
+								</div>
+								<div class="hot-content">
+									{post.data.category && (
+										<span class="hot-category" style={`background: ${categoryColors[post.data.category] || '#7C6AEF'}`}>
+											{post.data.category}
+										</span>
+									)}
+									<h3>{post.data.title}</h3>
+									<span class="hot-date">
+										<FormattedDate date={post.data.pubDate} />
+									</span>
+								</div>
+							</a>
+						</article>
+					))}
+				</div>
+			</section>
+
+			<!-- Latest News -->
+			{latestNews.length > 0 && (
+				<section class="latest-news">
+					<div class="section-header">
+						<h2><span class="clock">🕐</span> Últimas Noticias</h2>
+					</div>
+					<div class="news-list">
+						{latestNews.map((post) => (
+							<article class="news-card">
+								<a href={`/blog/${post.id}/`}>
+									<div class="news-thumb">
+										{post.data.heroImage && (
+											<img src={post.data.heroImage} alt={post.data.title} loading="lazy" />
+										)}
+									</div>
+									<div class="news-content">
+										<div class="news-meta">
+											{post.data.category && (
+												<span class="news-category" style={`color: ${categoryColors[post.data.category] || '#7C6AEF'}`}>
+													{post.data.category}
+												</span>
+											)}
+											<span class="news-date">
+												<FormattedDate date={post.data.pubDate} />
+											</span>
+										</div>
+										<h3>{post.data.title}</h3>
+										<p>{post.data.description}</p>
+									</div>
+								</a>
+							</article>
+						))}
+					</div>
+				</section>
+			)}
+
+			<!-- Newsletter CTA -->
+			<section class="newsletter-cta">
+				<div class="newsletter-content">
+					<span class="newsletter-icon">⚡</span>
+					<h2>Mantente al día con la IA</h2>
+					<p>Las noticias que tu competencia no quiere que leas. Directo a tu feed.</p>
+					<div class="social-buttons">
+						<a href="https://instagram.com/wearekod" target="_blank" rel="noopener" class="social-btn instagram">
+							<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+							Seguir en Instagram
+						</a>
+						<a href="/rss.xml" target="_blank" class="social-btn rss">
+							<svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20C5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93V10.1Z"/></svg>
+							RSS Feed
+						</a>
+					</div>
 				</div>
 			</section>
 		</main>
 		<Footer />
+
+		<script>
+			// Slider functionality
+			const slides = document.querySelectorAll('.slide');
+			const dots = document.querySelectorAll('.nav-dot');
+			const prevBtn = document.querySelector('.slider-arrow.prev');
+			const nextBtn = document.querySelector('.slider-arrow.next');
+			let currentSlide = 0;
+			let autoSlideInterval: ReturnType<typeof setInterval>;
+
+			function showSlide(index: number) {
+				slides.forEach((slide, i) => {
+					slide.classList.toggle('active', i === index);
+				});
+				dots.forEach((dot, i) => {
+					dot.classList.toggle('active', i === index);
+				});
+				currentSlide = index;
+			}
+
+			function nextSlide() {
+				const next = (currentSlide + 1) % slides.length;
+				showSlide(next);
+			}
+
+			function prevSlide() {
+				const prev = (currentSlide - 1 + slides.length) % slides.length;
+				showSlide(prev);
+			}
+
+			function startAutoSlide() {
+				autoSlideInterval = setInterval(nextSlide, 5000);
+			}
+
+			function stopAutoSlide() {
+				clearInterval(autoSlideInterval);
+			}
+
+			// Event listeners
+			dots.forEach((dot, index) => {
+				dot.addEventListener('click', () => {
+					stopAutoSlide();
+					showSlide(index);
+					startAutoSlide();
+				});
+			});
+
+			prevBtn?.addEventListener('click', () => {
+				stopAutoSlide();
+				prevSlide();
+				startAutoSlide();
+			});
+
+			nextBtn?.addEventListener('click', () => {
+				stopAutoSlide();
+				nextSlide();
+				startAutoSlide();
+			});
+
+			// Touch/swipe support
+			let touchStartX = 0;
+			let touchEndX = 0;
+			const slider = document.querySelector('.hero-slider');
+
+			slider?.addEventListener('touchstart', (e: TouchEvent) => {
+				touchStartX = e.changedTouches[0].screenX;
+			}, { passive: true });
+
+			slider?.addEventListener('touchend', (e: TouchEvent) => {
+				touchEndX = e.changedTouches[0].screenX;
+				if (touchStartX - touchEndX > 50) {
+					stopAutoSlide();
+					nextSlide();
+					startAutoSlide();
+				} else if (touchEndX - touchStartX > 50) {
+					stopAutoSlide();
+					prevSlide();
+					startAutoSlide();
+				}
+			}, { passive: true });
+
+			// Start auto-slide
+			startAutoSlide();
+		</script>
 	</body>
 </html>
 
 <style>
-	/* Hero Section - Mobile First */
-	.hero {
-		text-align: center;
-		padding: 2rem 0 1.5rem;
-		border-bottom: 1px solid #374151;
-		margin-bottom: 2rem;
-	}
-	
-	.hero h1 {
-		font-size: 2rem;
-		margin-bottom: 0.5rem;
-		line-height: 1.2;
-	}
-	
-	.lightning {
-		color: #7C6AEF;
-	}
-	
-	.hero .tagline {
-		font-size: 1rem;
-		color: #9CA3AF;
-		margin: 0 0 0.75rem;
-		line-height: 1.4;
-	}
-	
-	.hero .handle {
-		font-size: 0.9rem;
-		color: #6B7280;
-		margin: 0;
-	}
-	
-	.hero .handle a {
-		color: #7C6AEF;
-		font-weight: 600;
-	}
-	
-	@media (min-width: 480px) {
-		.hero {
-			padding: 2.5rem 0 2rem;
-		}
-		
-		.hero h1 {
-			font-size: 2.5rem;
-		}
-		
-		.hero .tagline {
-			font-size: 1.125rem;
-		}
-	}
-	
-	@media (min-width: 768px) {
-		.hero {
-			padding: 3.5rem 0 2.5rem;
-			margin-bottom: 2.5rem;
-		}
-		
-		.hero h1 {
-			font-size: 3rem;
-		}
-		
-		.hero .tagline {
-			font-size: 1.25rem;
-		}
-		
-		.hero .handle {
-			font-size: 1rem;
-			margin-top: 1rem;
-		}
-	}
-	
-	/* Latest Posts Section */
-	.latest-posts {
-		margin-bottom: 2rem;
-	}
-	
-	.latest-posts h2 {
-		font-size: 1.25rem;
-		margin-bottom: 1rem;
-		color: white;
-	}
-	
-	@media (min-width: 768px) {
-		.latest-posts h2 {
-			font-size: 1.5rem;
-			margin-bottom: 1.5rem;
-		}
-	}
-	
-	.post-list {
-		list-style: none;
-		padding: 0;
-		margin: 0;
-	}
-	
-	.post-list li {
-		margin-bottom: 0;
-	}
-	
-	/* Post Card - Mobile First */
-	.post-card {
-		display: block;
-		padding: 1rem;
-		background: #1A1A1A;
-		border: 1px solid #374151;
-		border-radius: 12px;
-		margin-bottom: 0.75rem;
-		text-decoration: none;
-		transition: all 0.2s ease;
-		-webkit-tap-highlight-color: transparent;
-	}
-	
-	.post-card:hover {
-		border-color: #7C6AEF;
-		transform: translateY(-2px);
-		box-shadow: 0 4px 20px rgba(124, 106, 239, 0.15);
-		text-decoration: none;
-	}
-	
-	.post-card:active {
-		transform: translateY(0);
-	}
-	
-	@media (min-width: 768px) {
-		.post-card {
-			padding: 1.5rem;
-			margin-bottom: 1rem;
-		}
-	}
-	
-	/* Post Card Header */
-	.post-card-header {
+	/* Breaking News Ticker */
+	.breaking-news {
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
-		gap: 0.75rem;
-		margin-bottom: 0.5rem;
-		flex-wrap: wrap;
+		background: linear-gradient(90deg, #7C6AEF 0%, #5B4BC7 100%);
+		padding: 0.5rem 1rem;
+		gap: 1rem;
+		overflow: hidden;
 	}
-	
-	.category {
-		display: inline-block;
-		padding: 0.2rem 0.6rem;
-		background: #7C6AEF;
+
+	.breaking-label {
+		flex-shrink: 0;
+		font-weight: 700;
+		font-size: 0.75rem;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
 		color: white;
-		font-size: 0.65rem;
+		background: rgba(0,0,0,0.3);
+		padding: 0.25rem 0.5rem;
+		border-radius: 4px;
+	}
+
+	.ticker-wrapper {
+		flex: 1;
+		overflow: hidden;
+		mask-image: linear-gradient(90deg, transparent, black 5%, black 95%, transparent);
+	}
+
+	.ticker {
+		display: flex;
+		gap: 3rem;
+		animation: ticker 30s linear infinite;
+		white-space: nowrap;
+	}
+
+	.ticker-item {
+		color: white;
+		text-decoration: none;
+		font-size: 0.875rem;
+		font-weight: 500;
+		opacity: 0.95;
+	}
+
+	.ticker-item:hover {
+		opacity: 1;
+		text-decoration: underline;
+	}
+
+	@keyframes ticker {
+		0% { transform: translateX(0); }
+		100% { transform: translateX(-50%); }
+	}
+
+	/* Hero Slider */
+	.hero-slider {
+		position: relative;
+		width: 100%;
+		height: 50vh;
+		min-height: 300px;
+		max-height: 500px;
+		overflow: hidden;
+	}
+
+	@media (min-width: 768px) {
+		.hero-slider {
+			height: 60vh;
+			max-height: 600px;
+		}
+	}
+
+	.slider-container {
+		position: relative;
+		width: 100%;
+		height: 100%;
+	}
+
+	.slide {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		transition: opacity 0.5s ease;
+		pointer-events: none;
+	}
+
+	.slide.active {
+		opacity: 1;
+		pointer-events: auto;
+	}
+
+	.slide-link {
+		display: block;
+		width: 100%;
+		height: 100%;
+		text-decoration: none;
+	}
+
+	.slide-image {
+		position: absolute;
+		inset: 0;
+	}
+
+	.slide-image img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.slide-overlay {
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(
+			to top,
+			rgba(13, 13, 13, 0.95) 0%,
+			rgba(13, 13, 13, 0.7) 40%,
+			rgba(13, 13, 13, 0.3) 100%
+		);
+	}
+
+	.slide-content {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		padding: 1.5rem;
+		z-index: 2;
+	}
+
+	@media (min-width: 768px) {
+		.slide-content {
+			padding: 3rem;
+			max-width: 800px;
+		}
+	}
+
+	.slide-category {
+		display: inline-block;
+		padding: 0.25rem 0.75rem;
+		font-size: 0.7rem;
 		font-weight: 700;
 		text-transform: uppercase;
-		border-radius: 4px;
-		letter-spacing: 0.03em;
-	}
-	
-	@media (min-width: 768px) {
-		.category {
-			font-size: 0.7rem;
-			padding: 0.25rem 0.75rem;
-		}
-	}
-	
-	.post-card .date {
-		color: #6B7280;
-		font-size: 0.75rem;
-	}
-	
-	@media (min-width: 768px) {
-		.post-card .date {
-			font-size: 0.85rem;
-		}
-	}
-	
-	.post-card h3 {
+		letter-spacing: 0.05em;
 		color: white;
-		font-size: 1.1rem;
-		margin-bottom: 0.375rem;
-		line-height: 1.3;
-		font-weight: 600;
+		border-radius: 4px;
+		margin-bottom: 0.75rem;
 	}
-	
+
+	.slide-title {
+		color: white;
+		font-size: 1.5rem;
+		font-weight: 800;
+		line-height: 1.2;
+		margin: 0 0 0.5rem;
+	}
+
 	@media (min-width: 768px) {
-		.post-card h3 {
-			font-size: 1.25rem;
-			margin-bottom: 0.5rem;
+		.slide-title {
+			font-size: 2.5rem;
 		}
 	}
-	
-	.post-card .description {
-		color: #9CA3AF;
-		font-size: 0.875rem;
-		margin: 0;
+
+	.slide-description {
+		color: #ccc;
+		font-size: 0.95rem;
 		line-height: 1.5;
+		margin: 0 0 0.75rem;
 		display: -webkit-box;
 		-webkit-line-clamp: 2;
 		-webkit-box-orient: vertical;
 		overflow: hidden;
 	}
-	
+
 	@media (min-width: 768px) {
-		.post-card .description {
-			font-size: 0.95rem;
+		.slide-description {
+			font-size: 1.1rem;
 			-webkit-line-clamp: 3;
 		}
 	}
-	
-	/* CTA Section - Mobile First */
-	.cta {
-		text-align: center;
-		padding: 2rem 1.25rem;
-		background: #1A1A1A;
-		border-radius: 16px;
-		margin-top: 2rem;
-		border: 1px solid #374151;
+
+	.slide-meta {
+		color: #888;
+		font-size: 0.85rem;
 	}
-	
-	.cta h2 {
-		font-size: 1.25rem;
-		color: white;
-		margin-bottom: 0.5rem;
-		line-height: 1.3;
+
+	/* Slider Navigation */
+	.slider-nav {
+		position: absolute;
+		bottom: 1rem;
+		right: 1rem;
+		display: flex;
+		gap: 0.5rem;
+		z-index: 10;
 	}
-	
-	.cta p {
-		color: #9CA3AF;
-		margin-bottom: 1.5rem;
-		font-size: 0.95rem;
-	}
-	
-	@media (min-width: 480px) {
-		.cta {
-			padding: 2.5rem 2rem;
+
+	@media (min-width: 768px) {
+		.slider-nav {
+			bottom: 2rem;
+			right: 2rem;
 		}
-		
-		.cta h2 {
+	}
+
+	.nav-dot {
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		background: rgba(255,255,255,0.3);
+		border: none;
+		cursor: pointer;
+		transition: all 0.3s ease;
+	}
+
+	.nav-dot.active {
+		background: #7C6AEF;
+		width: 30px;
+		border-radius: 5px;
+	}
+
+	.slider-arrow {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 40px;
+		height: 40px;
+		background: rgba(0,0,0,0.5);
+		border: none;
+		border-radius: 50%;
+		color: white;
+		font-size: 1.5rem;
+		cursor: pointer;
+		z-index: 10;
+		opacity: 0;
+		transition: opacity 0.3s ease;
+	}
+
+	.hero-slider:hover .slider-arrow {
+		opacity: 1;
+	}
+
+	.slider-arrow.prev { left: 1rem; }
+	.slider-arrow.next { right: 1rem; }
+
+	.slider-arrow:hover {
+		background: rgba(124, 106, 239, 0.8);
+	}
+
+	/* Categories Bar */
+	.categories-bar {
+		padding: 1rem 0;
+		border-bottom: 1px solid #374151;
+		margin-bottom: 2rem;
+	}
+
+	.categories-scroll {
+		display: flex;
+		gap: 0.75rem;
+		overflow-x: auto;
+		padding: 0 1rem;
+		scrollbar-width: none;
+		-ms-overflow-style: none;
+	}
+
+	.categories-scroll::-webkit-scrollbar {
+		display: none;
+	}
+
+	.category-pill {
+		flex-shrink: 0;
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		padding: 0.5rem 1rem;
+		background: #1A1A1A;
+		border: 1px solid #374151;
+		border-radius: 50px;
+		color: #ccc;
+		text-decoration: none;
+		font-size: 0.875rem;
+		font-weight: 500;
+		transition: all 0.2s ease;
+	}
+
+	.category-pill:hover {
+		border-color: var(--cat-color, #7C6AEF);
+		color: var(--cat-color, #7C6AEF);
+		text-decoration: none;
+	}
+
+	.category-pill.all {
+		background: #7C6AEF;
+		border-color: #7C6AEF;
+		color: white;
+	}
+
+	.cat-icon {
+		font-size: 1rem;
+	}
+
+	/* Section Headers */
+	.section-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 1.5rem;
+		padding: 0 1rem;
+	}
+
+	.section-header h2 {
+		font-size: 1.25rem;
+		font-weight: 700;
+		color: white;
+		margin: 0;
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+	}
+
+	@media (min-width: 768px) {
+		.section-header h2 {
 			font-size: 1.5rem;
 		}
 	}
-	
-	@media (min-width: 768px) {
-		.cta {
-			padding: 3.5rem 2rem;
-			margin-top: 3rem;
+
+	.see-all {
+		color: #7C6AEF;
+		font-size: 0.875rem;
+		font-weight: 600;
+		text-decoration: none;
+	}
+
+	.see-all:hover {
+		text-decoration: underline;
+	}
+
+	/* Hot Topics Grid */
+	.hot-topics {
+		margin-bottom: 3rem;
+	}
+
+	.hot-grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 1rem;
+		padding: 0 1rem;
+	}
+
+	@media (min-width: 640px) {
+		.hot-grid {
+			grid-template-columns: repeat(2, 1fr);
 		}
-		
-		.cta h2 {
-			font-size: 1.75rem;
-		}
-		
-		.cta p {
-			font-size: 1rem;
-			margin-bottom: 2rem;
+
+		.hot-card.featured {
+			grid-column: span 2;
 		}
 	}
-	
-	/* CTA Buttons */
-	.cta-buttons {
+
+	@media (min-width: 1024px) {
+		.hot-grid {
+			grid-template-columns: repeat(4, 1fr);
+		}
+
+		.hot-card.featured {
+			grid-column: span 2;
+			grid-row: span 2;
+		}
+	}
+
+	.hot-card {
+		position: relative;
+		border-radius: 12px;
+		overflow: hidden;
+		aspect-ratio: 16/9;
+	}
+
+	.hot-card.featured {
+		aspect-ratio: 16/10;
+	}
+
+	@media (min-width: 1024px) {
+		.hot-card.featured {
+			aspect-ratio: auto;
+		}
+	}
+
+	.hot-card a {
+		display: block;
+		width: 100%;
+		height: 100%;
+		text-decoration: none;
+	}
+
+	.hot-image {
+		position: absolute;
+		inset: 0;
+	}
+
+	.hot-image img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transition: transform 0.3s ease;
+	}
+
+	.hot-card:hover .hot-image img {
+		transform: scale(1.05);
+	}
+
+	.hot-overlay {
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(
+			to top,
+			rgba(0,0,0,0.9) 0%,
+			rgba(0,0,0,0.3) 50%,
+			transparent 100%
+		);
+	}
+
+	.hot-content {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		padding: 1rem;
+	}
+
+	.hot-category {
+		display: inline-block;
+		padding: 0.2rem 0.5rem;
+		font-size: 0.65rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		color: white;
+		border-radius: 3px;
+		margin-bottom: 0.5rem;
+	}
+
+	.hot-card h3 {
+		color: white;
+		font-size: 0.95rem;
+		font-weight: 600;
+		line-height: 1.3;
+		margin: 0 0 0.25rem;
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+
+	.hot-card.featured h3 {
+		font-size: 1.25rem;
+		-webkit-line-clamp: 3;
+	}
+
+	@media (min-width: 1024px) {
+		.hot-card.featured h3 {
+			font-size: 1.5rem;
+		}
+	}
+
+	.hot-date {
+		color: #888;
+		font-size: 0.75rem;
+	}
+
+	/* Latest News */
+	.latest-news {
+		margin-bottom: 3rem;
+	}
+
+	.news-list {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		padding: 0 1rem;
+	}
+
+	.news-card {
+		background: #1A1A1A;
+		border: 1px solid #374151;
+		border-radius: 12px;
+		overflow: hidden;
+		transition: all 0.2s ease;
+	}
+
+	.news-card:hover {
+		border-color: #7C6AEF;
+		transform: translateY(-2px);
+	}
+
+	.news-card a {
+		display: flex;
+		text-decoration: none;
+		gap: 1rem;
+	}
+
+	.news-thumb {
+		flex-shrink: 0;
+		width: 120px;
+		height: 90px;
+	}
+
+	@media (min-width: 640px) {
+		.news-thumb {
+			width: 180px;
+			height: 120px;
+		}
+	}
+
+	.news-thumb img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.news-content {
+		flex: 1;
+		padding: 0.75rem 0.75rem 0.75rem 0;
+		min-width: 0;
+	}
+
+	@media (min-width: 640px) {
+		.news-content {
+			padding: 1rem 1rem 1rem 0;
+		}
+	}
+
+	.news-meta {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+		margin-bottom: 0.25rem;
+	}
+
+	.news-category {
+		font-size: 0.7rem;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+
+	.news-date {
+		color: #666;
+		font-size: 0.75rem;
+	}
+
+	.news-content h3 {
+		color: white;
+		font-size: 0.95rem;
+		font-weight: 600;
+		line-height: 1.3;
+		margin: 0 0 0.25rem;
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+
+	@media (min-width: 640px) {
+		.news-content h3 {
+			font-size: 1.1rem;
+		}
+	}
+
+	.news-content p {
+		color: #888;
+		font-size: 0.8rem;
+		line-height: 1.4;
+		margin: 0;
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+
+	@media (max-width: 480px) {
+		.news-content p {
+			display: none;
+		}
+	}
+
+	/* Newsletter CTA */
+	.newsletter-cta {
+		background: linear-gradient(135deg, #1A1A1A 0%, #2D2D2D 100%);
+		border: 1px solid #374151;
+		border-radius: 16px;
+		margin: 2rem 1rem 3rem;
+		padding: 2rem;
+		text-align: center;
+	}
+
+	@media (min-width: 768px) {
+		.newsletter-cta {
+			padding: 3rem;
+			margin: 3rem 1rem 4rem;
+		}
+	}
+
+	.newsletter-icon {
+		font-size: 2.5rem;
+		display: block;
+		margin-bottom: 1rem;
+	}
+
+	.newsletter-content h2 {
+		color: white;
+		font-size: 1.5rem;
+		margin: 0 0 0.5rem;
+	}
+
+	@media (min-width: 768px) {
+		.newsletter-content h2 {
+			font-size: 1.75rem;
+		}
+	}
+
+	.newsletter-content p {
+		color: #9CA3AF;
+		font-size: 1rem;
+		margin: 0 0 1.5rem;
+	}
+
+	.social-buttons {
 		display: flex;
 		flex-direction: column;
 		gap: 0.75rem;
-		max-width: 280px;
+		max-width: 300px;
 		margin: 0 auto;
 	}
-	
+
 	@media (min-width: 480px) {
-		.cta-buttons {
+		.social-buttons {
 			flex-direction: row;
 			justify-content: center;
 			max-width: none;
-			gap: 1rem;
 		}
 	}
-	
-	.btn {
+
+	.social-btn {
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
+		gap: 0.5rem;
 		padding: 0.875rem 1.5rem;
 		border-radius: 8px;
 		font-weight: 600;
-		font-size: 1rem;
+		font-size: 0.95rem;
 		text-decoration: none;
 		transition: all 0.2s ease;
-		min-height: 48px;
-		-webkit-tap-highlight-color: transparent;
 	}
-	
-	.btn.primary {
-		background: #7C6AEF;
+
+	.social-btn svg {
+		width: 20px;
+		height: 20px;
+	}
+
+	.social-btn.instagram {
+		background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
 		color: white;
 	}
-	
-	.btn.primary:hover {
-		background: #9D8FF2;
-		text-decoration: none;
+
+	.social-btn.instagram:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 4px 15px rgba(225, 48, 108, 0.4);
 	}
-	
-	.btn.primary:active {
-		background: #5B4BC7;
+
+	.social-btn.rss {
+		background: #F59E0B;
+		color: white;
 	}
-	
-	.btn.secondary {
-		background: transparent;
-		color: #7C6AEF;
-		border: 2px solid #7C6AEF;
-	}
-	
-	.btn.secondary:hover {
-		background: rgba(124, 106, 239, 0.1);
-		text-decoration: none;
+
+	.social-btn.rss:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
 	}
 </style>
