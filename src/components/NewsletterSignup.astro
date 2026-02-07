@@ -13,7 +13,7 @@ const {
 <section class="newsletter-signup">
   <div class="newsletter-content">
     <div class="newsletter-icon">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="32" height="32">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="28" height="28" aria-hidden="true">
         <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
         <path d="M22 6l-10 7L2 6"/>
       </svg>
@@ -27,10 +27,12 @@ const {
         placeholder="tu@email.com" 
         required 
         class="newsletter-input"
+        autocomplete="email"
+        inputmode="email"
       />
       <button type="submit" class="newsletter-btn">
-        Suscribirme
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+        <span class="btn-text">Suscribirme</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18" aria-hidden="true">
           <path d="M5 12h14M12 5l7 7-7 7"/>
         </svg>
       </button>
@@ -40,7 +42,7 @@ const {
       <a href="/privacidad">Política de privacidad</a>
     </p>
   </div>
-  <div class="newsletter-decoration">
+  <div class="newsletter-decoration" aria-hidden="true">
     <div class="decoration-circle"></div>
     <div class="decoration-circle small"></div>
   </div>
@@ -49,13 +51,21 @@ const {
 <style>
   .newsletter-signup {
     position: relative;
-    margin: 4rem 0;
-    padding: 3rem 2rem;
+    margin: 2.5rem 0;
+    padding: 2rem 1.25rem;
     background: linear-gradient(135deg, rgba(124, 106, 239, 0.15) 0%, rgba(124, 106, 239, 0.05) 100%);
     border: 1px solid rgba(124, 106, 239, 0.3);
-    border-radius: 20px;
+    border-radius: 16px;
     overflow: hidden;
     text-align: center;
+  }
+
+  @media (min-width: 768px) {
+    .newsletter-signup {
+      margin: 4rem 0;
+      padding: 3rem 2rem;
+      border-radius: 20px;
+    }
   }
 
   .newsletter-content {
@@ -69,32 +79,69 @@ const {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 64px;
-    height: 64px;
+    width: 56px;
+    height: 56px;
     background: #7C6AEF;
-    border-radius: 16px;
-    margin-bottom: 1.5rem;
+    border-radius: 14px;
+    margin-bottom: 1.25rem;
     color: white;
   }
 
+  @media (min-width: 768px) {
+    .newsletter-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 16px;
+      margin-bottom: 1.5rem;
+    }
+
+    .newsletter-icon svg {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
   .newsletter-title {
-    font-size: 1.75rem;
+    font-size: 1.375rem;
     font-weight: 700;
     color: white;
-    margin: 0 0 0.75rem;
+    margin: 0 0 0.5rem;
+    line-height: 1.3;
+  }
+
+  @media (min-width: 768px) {
+    .newsletter-title {
+      font-size: 1.75rem;
+      margin: 0 0 0.75rem;
+    }
   }
 
   .newsletter-description {
     color: #aaa;
-    font-size: 1rem;
-    line-height: 1.6;
-    margin: 0 0 1.5rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0 0 1.25rem;
+  }
+
+  @media (min-width: 768px) {
+    .newsletter-description {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin: 0 0 1.5rem;
+    }
   }
 
   .newsletter-form {
     display: flex;
+    flex-direction: column;
     gap: 0.75rem;
     margin-bottom: 1rem;
+  }
+
+  @media (min-width: 480px) {
+    .newsletter-form {
+      flex-direction: row;
+    }
   }
 
   .newsletter-input {
@@ -106,6 +153,7 @@ const {
     color: white;
     font-size: 1rem;
     transition: border-color 0.2s;
+    min-height: 48px;
   }
 
   .newsletter-input::placeholder {
@@ -120,6 +168,7 @@ const {
   .newsletter-btn {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
     padding: 0.875rem 1.5rem;
     background: #7C6AEF;
@@ -131,6 +180,8 @@ const {
     cursor: pointer;
     transition: all 0.2s;
     white-space: nowrap;
+    min-height: 48px;
+    -webkit-tap-highlight-color: transparent;
   }
 
   .newsletter-btn:hover {
@@ -138,10 +189,22 @@ const {
     transform: translateY(-2px);
   }
 
+  .newsletter-btn:active {
+    transform: translateY(0);
+    background: #5B4BC7;
+  }
+
   .newsletter-privacy {
-    font-size: 0.8125rem;
+    font-size: 0.75rem;
     color: #666;
     margin: 0;
+    line-height: 1.5;
+  }
+
+  @media (min-width: 768px) {
+    .newsletter-privacy {
+      font-size: 0.8125rem;
+    }
   }
 
   .newsletter-privacy a {
@@ -160,45 +223,71 @@ const {
     bottom: 0;
     left: 0;
     pointer-events: none;
+    overflow: hidden;
   }
 
   .decoration-circle {
     position: absolute;
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     background: radial-gradient(circle, rgba(124, 106, 239, 0.1) 0%, transparent 70%);
-    top: -100px;
-    right: -100px;
+    top: -80px;
+    right: -80px;
+  }
+
+  @media (min-width: 768px) {
+    .decoration-circle {
+      width: 300px;
+      height: 300px;
+      top: -100px;
+      right: -100px;
+    }
   }
 
   .decoration-circle.small {
-    width: 150px;
-    height: 150px;
-    bottom: -50px;
-    left: -50px;
+    width: 100px;
+    height: 100px;
+    bottom: -40px;
+    left: -40px;
     top: auto;
     right: auto;
   }
 
-  @media (max-width: 640px) {
-    .newsletter-form {
-      flex-direction: column;
-    }
-
-    .newsletter-btn {
-      justify-content: center;
+  @media (min-width: 768px) {
+    .decoration-circle.small {
+      width: 150px;
+      height: 150px;
+      bottom: -50px;
+      left: -50px;
     }
   }
 </style>
 
 <script>
-  const form = document.getElementById('newsletter-form');
+  const form = document.getElementById('newsletter-form') as HTMLFormElement | null;
   form?.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const email = new FormData(form).get('email');
-    // TODO: Connect to newsletter service
-    alert('¡Gracias por suscribirte! Te mantendremos informado.');
-    form.reset();
+    const formData = new FormData(form);
+    const email = formData.get('email');
+    
+    if (email) {
+      // TODO: Connect to newsletter service (Resend, etc.)
+      const btn = form.querySelector('.newsletter-btn') as HTMLButtonElement;
+      const originalText = btn.querySelector('.btn-text')?.textContent;
+      
+      if (btn.querySelector('.btn-text')) {
+        btn.querySelector('.btn-text')!.textContent = '¡Gracias!';
+      }
+      btn.disabled = true;
+      
+      setTimeout(() => {
+        if (btn.querySelector('.btn-text') && originalText) {
+          btn.querySelector('.btn-text')!.textContent = originalText;
+        }
+        btn.disabled = false;
+        form.reset();
+      }, 3000);
+    }
   });
 </script>

@@ -8,33 +8,109 @@ import HeaderLink from './HeaderLink.astro';
 		<a href="/" class="logo">
 			<span class="lightning">⚡</span> KÖD
 		</a>
-		<div class="nav-links">
+		
+		<!-- Desktop Navigation -->
+		<div class="nav-links desktop-only">
 			<HeaderLink href="/">Inicio</HeaderLink>
 			<HeaderLink href="/blog">Blog</HeaderLink>
 			<HeaderLink href="/categorias/ia">IA</HeaderLink>
 			<HeaderLink href="/categorias/negocios">Negocios</HeaderLink>
 			<HeaderLink href="/categorias/tech">Tech</HeaderLink>
 		</div>
-		<div class="social-links">
-			<a href="https://instagram.com/wearekod" target="_blank" aria-label="Instagram">
+		
+		<!-- Desktop Social Links -->
+		<div class="social-links desktop-only">
+			<a href="https://instagram.com/wearekod" target="_blank" rel="noopener" aria-label="Instagram">
 				<svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
 					<path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
 				</svg>
 			</a>
-			<a href="https://twitter.com/wearekod" target="_blank" aria-label="Twitter/X">
+			<a href="https://twitter.com/wearekod" target="_blank" rel="noopener" aria-label="Twitter/X">
 				<svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
 					<path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
 				</svg>
 			</a>
 		</div>
+		
+		<!-- Mobile Menu Button -->
+		<button class="menu-toggle mobile-only" aria-label="Abrir menú" aria-expanded="false">
+			<span class="hamburger">
+				<span></span>
+				<span></span>
+				<span></span>
+			</span>
+		</button>
 	</nav>
+	
+	<!-- Mobile Navigation Drawer -->
+	<div class="mobile-nav" aria-hidden="true">
+		<div class="mobile-nav-content">
+			<div class="mobile-nav-links">
+				<a href="/">Inicio</a>
+				<a href="/blog">Blog</a>
+				<a href="/categorias/ia">Inteligencia Artificial</a>
+				<a href="/categorias/negocios">Negocios</a>
+				<a href="/categorias/tech">Tecnología</a>
+				<a href="/categorias/marketing">Marketing Digital</a>
+			</div>
+			<div class="mobile-nav-social">
+				<a href="https://instagram.com/wearekod" target="_blank" rel="noopener">
+					<svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+						<path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+					</svg>
+					Instagram
+				</a>
+				<a href="https://twitter.com/wearekod" target="_blank" rel="noopener">
+					<svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+						<path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+					</svg>
+					Twitter/X
+				</a>
+				<a href="https://tiktok.com/@wearekod" target="_blank" rel="noopener">
+					<svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+						<path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+					</svg>
+					TikTok
+				</a>
+			</div>
+		</div>
+	</div>
 </header>
+
+<script>
+	// Mobile menu toggle
+	document.addEventListener('DOMContentLoaded', () => {
+		const menuToggle = document.querySelector('.menu-toggle');
+		const mobileNav = document.querySelector('.mobile-nav');
+		const header = document.querySelector('header');
+		
+		if (menuToggle && mobileNav) {
+			menuToggle.addEventListener('click', () => {
+				const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+				menuToggle.setAttribute('aria-expanded', (!isExpanded).toString());
+				mobileNav.setAttribute('aria-hidden', isExpanded.toString());
+				header?.classList.toggle('menu-open');
+				document.body.classList.toggle('menu-open');
+			});
+			
+			// Close menu when clicking a link
+			mobileNav.querySelectorAll('a').forEach(link => {
+				link.addEventListener('click', () => {
+					menuToggle.setAttribute('aria-expanded', 'false');
+					mobileNav.setAttribute('aria-hidden', 'true');
+					header?.classList.remove('menu-open');
+					document.body.classList.remove('menu-open');
+				});
+			});
+		}
+	});
+</script>
 
 <style>
 	header {
 		background: #1A1A1A;
 		border-bottom: 1px solid #374151;
-		padding: 0 1em;
+		padding: 0 1rem;
 		position: sticky;
 		top: 0;
 		z-index: 100;
@@ -46,17 +122,19 @@ import HeaderLink from './HeaderLink.astro';
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding: 1em 0;
+		padding: 0.875rem 0;
+		min-height: 60px;
 	}
 	
 	.logo {
-		font-size: 1.5em;
+		font-size: 1.5rem;
 		font-weight: 700;
 		color: white;
 		text-decoration: none;
 		display: flex;
 		align-items: center;
-		gap: 0.25em;
+		gap: 0.25rem;
+		-webkit-tap-highlight-color: transparent;
 	}
 	
 	.logo:hover {
@@ -67,17 +145,19 @@ import HeaderLink from './HeaderLink.astro';
 		color: #7C6AEF;
 	}
 	
+	/* Desktop Navigation */
 	.nav-links {
 		display: flex;
-		gap: 0.5em;
+		gap: 0.5rem;
 	}
 	
 	.nav-links :global(a) {
-		padding: 0.5em 1em;
+		padding: 0.5rem 1rem;
 		color: #E5E7EB;
 		text-decoration: none;
 		border-radius: 6px;
 		transition: all 0.2s ease;
+		font-size: 0.95rem;
 	}
 	
 	.nav-links :global(a:hover),
@@ -88,25 +168,168 @@ import HeaderLink from './HeaderLink.astro';
 	
 	.social-links {
 		display: flex;
-		gap: 1em;
+		gap: 1rem;
 	}
 	
 	.social-links a {
 		color: #9CA3AF;
 		transition: color 0.2s ease;
+		padding: 0.5rem;
+		-webkit-tap-highlight-color: transparent;
 	}
 	
 	.social-links a:hover {
 		color: #7C6AEF;
 	}
 	
+	/* Mobile Menu Button */
+	.menu-toggle {
+		display: none;
+		background: none;
+		border: none;
+		cursor: pointer;
+		padding: 0.75rem;
+		margin: -0.75rem;
+		-webkit-tap-highlight-color: transparent;
+	}
+	
+	.hamburger {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		width: 24px;
+		height: 18px;
+	}
+	
+	.hamburger span {
+		display: block;
+		width: 100%;
+		height: 2px;
+		background: white;
+		border-radius: 2px;
+		transition: all 0.3s ease;
+	}
+	
+	/* Hamburger animation */
+	header.menu-open .hamburger span:nth-child(1) {
+		transform: rotate(45deg) translate(5px, 5px);
+	}
+	
+	header.menu-open .hamburger span:nth-child(2) {
+		opacity: 0;
+	}
+	
+	header.menu-open .hamburger span:nth-child(3) {
+		transform: rotate(-45deg) translate(6px, -6px);
+	}
+	
+	/* Mobile Navigation Drawer */
+	.mobile-nav {
+		position: fixed;
+		top: 60px;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: #0D0D0D;
+		z-index: 99;
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity 0.3s ease, visibility 0.3s ease;
+		overflow-y: auto;
+		-webkit-overflow-scrolling: touch;
+	}
+	
+	.mobile-nav[aria-hidden="false"] {
+		opacity: 1;
+		visibility: visible;
+	}
+	
+	.mobile-nav-content {
+		padding: 1.5rem;
+		display: flex;
+		flex-direction: column;
+		min-height: calc(100vh - 60px);
+	}
+	
+	.mobile-nav-links {
+		display: flex;
+		flex-direction: column;
+		gap: 0.25rem;
+	}
+	
+	.mobile-nav-links a {
+		display: block;
+		padding: 1rem 1.25rem;
+		color: white;
+		text-decoration: none;
+		font-size: 1.125rem;
+		font-weight: 500;
+		border-radius: 12px;
+		transition: background 0.2s ease;
+		-webkit-tap-highlight-color: transparent;
+	}
+	
+	.mobile-nav-links a:hover,
+	.mobile-nav-links a:active {
+		background: rgba(124, 106, 239, 0.1);
+		color: #7C6AEF;
+	}
+	
+	.mobile-nav-social {
+		margin-top: auto;
+		padding-top: 2rem;
+		border-top: 1px solid #374151;
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+	
+	.mobile-nav-social a {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		padding: 1rem 1.25rem;
+		color: #9CA3AF;
+		text-decoration: none;
+		font-size: 1rem;
+		border-radius: 12px;
+		transition: all 0.2s ease;
+		-webkit-tap-highlight-color: transparent;
+	}
+	
+	.mobile-nav-social a:hover,
+	.mobile-nav-social a:active {
+		background: rgba(124, 106, 239, 0.1);
+		color: #7C6AEF;
+	}
+	
+	/* Responsive */
+	.desktop-only {
+		display: flex;
+	}
+	
+	.mobile-only {
+		display: none;
+	}
+	
 	@media (max-width: 768px) {
-		.nav-links {
+		.desktop-only {
 			display: none;
 		}
 		
-		.social-links {
-			display: none;
+		.mobile-only {
+			display: flex;
 		}
+		
+		nav {
+			padding: 0.75rem 0;
+		}
+	}
+	
+	/* Prevent body scroll when menu is open */
+	:global(body.menu-open) {
+		overflow: hidden;
+		position: fixed;
+		width: 100%;
 	}
 </style>
