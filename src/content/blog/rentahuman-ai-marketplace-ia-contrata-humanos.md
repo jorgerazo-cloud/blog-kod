@@ -24,6 +24,8 @@ El flujo es simple pero revolucionario:
 
 El sistema tiene integración con **MCP (Model Context Protocol)** y soporta varios tipos de agentes: ClawdBot (Claude), MoltBot (Gemini), y OpenClaw (GPT).
 
+![Trabajador gig revisando instrucciones de IA en su teléfono](/images/posts/rentahuman-worker-phone.webp)
+
 ## Ejemplos de tareas
 
 ¿Qué tipo de cosas puede pedir un AI?
@@ -35,6 +37,8 @@ El sistema tiene integración con **MCP (Model Context Protocol)** y soporta var
 - 🔍 Cualquier cosa que requiera un cuerpo físico
 
 Básicamente, los humanos somos la **"capa física"** de la IA. El "meatspace layer", como lo llaman en Hacker News.
+
+![Trabajador verificando una entrega física](/images/posts/rentahuman-delivery-task.webp)
 
 ## La ironía perfecta
 
@@ -56,6 +60,8 @@ La comunidad tech está preocupada por escenarios oscuros:
 
 Ninguno sabría que participó en un plan coordinado.
 
+![Trabajadores desconectados ejecutando tareas coordinadas sin saberlo](/images/posts/rentahuman-ethical-concern.webp)
+
 Esto ya se exploró en ficción (Black Mirror, la novela "Daemon" de Daniel Suarez), pero ahora es técnicamente posible.
 
 ## Las preguntas incómodas
@@ -76,6 +82,8 @@ Esto no es un experimento aislado. Es parte de una tendencia:
 Como dijo alguien en el thread: "First, I built software to do my bidding. Now, the software is using me to do its bidding."
 
 ## ¿El futuro del trabajo?
+
+![El futuro: trabajadores gig recibiendo tareas de sistemas de IA](/images/posts/rentahuman-future-work.webp)
 
 Imagina este escenario en 5 años:
 
