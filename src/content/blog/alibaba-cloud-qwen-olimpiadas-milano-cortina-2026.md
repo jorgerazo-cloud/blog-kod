@@ -13,6 +13,8 @@ Alibaba Cloud y el Comité Olímpico Internacional (COI) anunciaron que **el mod
 
 Es la **primera vez en la historia** que un modelo de lenguaje (LLM) se integra directamente en la infraestructura oficial de unas Olimpiadas.
 
+![Vista aérea de las pistas de esquí de Milano-Cortina 2026 con interfaces holográficas de IA mostrando estadísticas en tiempo real](/images/posts/alibaba-qwen-slopes.webp)
+
 ## Qué hará Qwen en las Olimpiadas
 
 ### Para los fans
@@ -28,6 +30,8 @@ Es la **primera vez en la historia** que un modelo de lenguaje (LLM) se integra 
 - **Acceso instantáneo** a guías y protocolos
 - **IA como asistente de operaciones** para coordinar logística
 - Documentos encontrados con preguntas, no con búsquedas exactas
+
+![Fans olímpicos usando asistentes de IA multilingües en sus smartphones durante un evento de invierno](/images/posts/alibaba-qwen-fans.webp)
 
 ## Por qué Alibaba hace esto
 
@@ -50,6 +54,8 @@ Esta movida pone a Alibaba en competencia directa con:
 
 La pregunta que muchos se hacen: **¿Veremos IA china dominando eventos globales antes que la americana?**
 
+![Representación de la competencia global entre gigantes de IA de distintos países](/images/posts/alibaba-qwen-competition.webp)
+
 ## Qué significa esto para el futuro
 
 1. **La IA en eventos masivos ya no es opcional** — Es infraestructura básica
@@ -62,6 +68,8 @@ La pregunta que muchos se hacen: **¿Veremos IA china dominando eventos globales
 - ¿Qué pasa si falla en vivo frente a miles de millones de personas?
 - ¿Cómo manejarán la privacidad de los datos de usuarios?
 - ¿El COI auditó el modelo para sesgos y desinformación?
+
+![Estadio futurista lleno de espectadores con pantallas holográficas mostrando analíticas de IA en tiempo real](/images/posts/alibaba-qwen-future.webp)
 
 ## El takeaway
 

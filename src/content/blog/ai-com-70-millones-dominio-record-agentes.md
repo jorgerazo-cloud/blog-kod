@@ -11,6 +11,8 @@ tags: ['AI.com', 'dominio', 'récord', 'agentes', 'marketplace', 'inversión']
 
 La domain **AI.com** fue vendida por **$70 millones de dólares**.
 
+![Dominio AI.com brillante flotando en espacio digital con visualización de 70 millones de dólares](/images/posts/ai-com-domain.webp)
+
 Es el precio más alto jamás pagado por un dominio en la historia.
 
 ## El récord mundial
@@ -31,6 +33,8 @@ AI.com tenía una historia interesante:
 - Ahora tiene nuevo dueño y nuevo propósito
 
 ## Qué van a construir
+
+![Marketplace de agentes IA con múltiples orbes brillantes conectados en red](/images/posts/ai-com-marketplace.webp)
 
 El comprador planea crear una **plataforma de agentes autónomos de IA**:
 
@@ -57,6 +61,8 @@ Este precio confirma lo que el mercado cree:
 AI.com quiere ser el centro de esta nueva economía.
 
 ## La pregunta incómoda
+
+![Agentes de IA autónomos trabajando 24/7 en un cuarto de servidores brillante](/images/posts/ai-com-agents-24-7.webp)
 
 Si alguien pagó $70 millones **solo por el nombre**...
 

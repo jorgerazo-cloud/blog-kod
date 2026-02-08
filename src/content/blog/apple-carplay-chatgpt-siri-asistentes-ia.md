@@ -21,6 +21,8 @@ Por si no lo conoces:
 - El 98% de los autos nuevos en EUA lo soportan
 - Hasta ahora, solo tenía a Siri como asistente de voz
 
+![Interior de un auto moderno con pantalla CarPlay mostrando interfaz de asistentes de IA](/images/posts/carplay-dashboard.webp)
+
 ## El cambio
 
 Apple planea abrir CarPlay a:
@@ -30,6 +32,8 @@ Apple planea abrir CarPlay a:
 
 Siri seguirá siendo el default, pero ya no será obligatorio.
 
+![Múltiples asistentes de IA holográficos apareciendo desde el tablero de un auto](/images/posts/carplay-ai-assistants.webp)
+
 ## Por qué importa
 
 El auto es el **próximo campo de batalla** de la IA:
@@ -38,6 +42,8 @@ El auto es el **próximo campo de batalla** de la IA:
 - Es tiempo "cautivo" — no puedes ver pantallas
 - La voz es la interfaz perfecta
 - Quien controle esa hora, gana
+
+![Persona conduciendo al atardecer interactuando con asistente de voz en su auto](/images/posts/carplay-voice-driving.webp)
 
 ## Implicaciones
 
@@ -55,6 +61,8 @@ Para **usuarios**: Asistentes de voz que realmente funcionan bien.
 - **800+** modelos de vehículos compatibles
 - Es el sistema de infoentretenimiento más usado
 - Hasta ahora, completamente cerrado a Siri
+
+![Persona rodeada de dispositivos con IA: reloj, teléfono, laptop y tablero de auto, todos conectados](/images/posts/carplay-ai-everywhere.webp)
 
 ## La pregunta incómoda
 

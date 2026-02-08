@@ -22,6 +22,8 @@ El resultado: un **compilador de C funcional** creado desde cero.
 - **100,000 líneas** de código en Rust
 - **1 humano** supervisando
 
+![Sala de control con 16 monitores mostrando código siendo escrito simultáneamente por agentes de IA](/images/posts/claude-16-agents-room.webp)
+
 ## Qué lograron
 
 El compilador puede:
@@ -29,12 +31,16 @@ El compilador puede:
 - Funcionar en arquitecturas **x86, ARM y RISC-V**
 - Es completamente funcional, no un prototipo
 
+![Terminal mostrando compilación exitosa del kernel de Linux con código Rust](/images/posts/claude-compiler-output.webp)
+
 ## Por qué es impresionante
 
 Crear un compilador desde cero es de **lo más complejo en programación**:
 - Requiere entender parsing, análisis léxico, optimización
 - Normalmente toma años a equipos de ingenieros
 - 16 IAs lo hicieron en 2 semanas
+
+![Visualización 3D de la arquitectura compleja de un compilador con flujos de datos conectados](/images/posts/claude-compiler-architecture.webp)
 
 ## El contexto
 
@@ -54,6 +60,8 @@ El objetivo era probar qué tan lejos pueden llegar los agentes de IA trabajando
 Si 16 IAs pueden hacer en 2 semanas lo que a un equipo humano le toma años...
 
 ¿Cuánto falta para que trabajen sin supervisión?
+
+![Ingeniero de software supervisando múltiples agentes de IA holográficos trabajando en código](/images/posts/claude-human-supervisor.webp)
 
 ## El takeaway
 

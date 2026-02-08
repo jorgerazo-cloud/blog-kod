@@ -11,11 +11,15 @@ tags: ['Super Bowl', 'Google', 'Amazon', 'Alexa', 'Gemini', 'publicidad', 'AI.co
 
 El Super Bowl LX se convirtió en el **Super Bowl de la IA**.
 
+![Estadio de Super Bowl con pantallas LED gigantes mostrando anuncios de tecnología IA](/images/posts/super-bowl-stadium.webp)
+
 Tres gigantes tecnológicos lanzaron comerciales de inteligencia artificial durante el evento más visto en Estados Unidos.
 
 ## Los contendientes
 
 ### Google Gemini: El decorador de interiores
+
+![Asistente IA de diseño de interiores con vista previa holográfica de muebles](/images/posts/super-bowl-gemini-home.webp)
 
 Google presenta a Gemini como **asistente de decoración de interiores**.
 
@@ -24,6 +28,8 @@ El comercial "New Home" muestra a una madre y su hijo imaginando su nueva casa c
 Dato importante: Google aprendió de su error del año pasado (el famoso dato del queso Gouda que era incorrecto). Este año, el comercial evita promesas de datos específicos.
 
 ### Amazon Alexa Plus: La que quiere matar a Thor
+
+![Bocina inteligente con visualización de red neuronal brillante](/images/posts/super-bowl-alexa.webp)
 
 Chris Hemsworth protagoniza el comercial de Amazon, donde **Alexa Plus parece planear formas elaboradas de matarlo**.
 
@@ -36,6 +42,8 @@ El CEO de Crypto.com, Kris Marszalek, lanza **AI.com** durante el Super Bowl.
 La promesa: crear agentes de IA personales que no solo responden preguntas, sino que **actúan en tu nombre**.
 
 ## Por qué esto importa
+
+![Multitud diversa usando smartphones con interfaces de IA, la IA se vuelve mainstream](/images/posts/super-bowl-mainstream.webp)
 
 Cuando las empresas gastan **$7-8 millones de dólares por 30 segundos** de comercial en el Super Bowl, es porque la IA ya no es nicho.
 

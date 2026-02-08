@@ -25,6 +25,8 @@ Estas cuatro empresas controlan:
 
 Juntas, están apostando todo a la IA.
 
+![Cuatro datacenters masivos conectados por redes neuronales brillantes, representando la infraestructura de IA de los gigantes tech](/images/posts/635b-datacenters.webp)
+
 ## El desglose
 
 ¿Quién invierte más?
@@ -36,6 +38,8 @@ Juntas, están apostando todo a la IA.
 
 Y esto es **solo infraestructura** — no incluye R&D ni adquisiciones.
 
+![Flujo masivo de inversión transformándose en circuitos de IA, visualización de 635 mil millones de dólares](/images/posts/635b-investment-flow.webp)
+
 ## Para dimensionar
 
 $635 mil millones es:
@@ -46,6 +50,8 @@ $635 mil millones es:
 - Más que el valor de mercado de Netflix, Uber y Spotify juntos
 
 Todo en **un solo año**.
+
+![Comparación de escala entre un cohete de la NASA y la infraestructura de datacenters de IA](/images/posts/635b-scale-comparison.webp)
 
 ## ¿Es una burbuja?
 
@@ -65,6 +71,8 @@ Si las empresas más ricas de la historia están apostando todo a la IA...
 ¿Por qué tu negocio sigue sin usarla?
 
 La ventana de oportunidad para adoptar IA temprano se está cerrando. Los que esperen demasiado competirán contra empresas que ya la dominan.
+
+![Profesional de negocios en una encrucijada eligiendo entre el pasado tradicional y el futuro con IA](/images/posts/635b-business-decision.webp)
 
 ## El takeaway
 
