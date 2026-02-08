@@ -13,6 +13,8 @@ tags: ['OpenAI', 'Anthropic', 'seguridad IA', 'AGI', 'talento tech', 'Dylan Scan
 
 Sí, OpenAI le robó a su competidor directo el ejecutivo encargado de que la IA no nos destruya.
 
+![Ejecutivo caminando entre dos empresas tech en concepto de headhunting corporativo](/images/posts/openai-anthropic-headhunting.webp)
+
 ## Lo que dijo Scandinaro
 
 En su anuncio en X:
@@ -29,14 +31,20 @@ Perder a tu líder de seguridad de AGI ante OpenAI es... irónico.
 
 ## Lo que esto significa
 
+![Escudo digital protegiendo una red neuronal de IA](/images/posts/openai-anthropic-safety.webp)
+
 ### 1. La guerra de talento es real
 Las empresas de IA están en competencia feroz por los mejores.
+
+![Torres corporativas enfrentándose como piezas de ajedrez en guerra de talento](/images/posts/openai-anthropic-talent-war.webp)
 
 ### 2. La seguridad importa (o al menos el optics)
 OpenAI contratando un "Head of Preparedness" señala que se toman en serio los riesgos.
 
 ### 3. El dinero habla
 OpenAI tiene más recursos que Anthropic. El talento sigue el dinero.
+
+![Flujo de dinero y recursos entre empresas tech](/images/posts/openai-anthropic-money.webp)
 
 ## Por qué debería importarte
 

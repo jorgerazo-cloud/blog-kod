@@ -13,6 +13,8 @@ Elon Musk anunció la **fusión de SpaceX, xAI y X (antes Twitter)** en una sola
 
 La movida precede a lo que podría ser **el IPO más grande en la historia de Silicon Valley**.
 
+![Cohete SpaceX lanzándose con flujos de datos digitales fusionándose con patrones de IA](/images/posts/musk-fusion-rocket.webp)
+
 ## Los números
 
 | Empresa | Estado financiero |
@@ -31,6 +33,8 @@ Los críticos lo comparan con "crear un nuevo email cada vez que quieres un free
 
 ## La estrategia declarada
 
+![Data center futurista flotando en órbita espacial con la Tierra visible](/images/posts/musk-fusion-space-datacenter.webp)
+
 Musk dice que la fusión permite:
 
 1. **Data centers de IA en el espacio** — xAI + SpaceX
@@ -39,6 +43,8 @@ Musk dice que la fusión permite:
 
 ## El ángulo del IPO
 
+![Wall Street con anuncio masivo de IPO en pantallas digitales](/images/posts/musk-fusion-ipo.webp)
+
 Bloomberg y WSJ reportan que SpaceX busca que los índices bursátiles (S&P 500, etc.) **aceleren su inclusión** después del IPO.
 
 ¿Por qué importa? Los fondos indexados compran automáticamente acciones en esos índices.
@@ -46,6 +52,8 @@ Bloomberg y WSJ reportan que SpaceX busca que los índices bursátiles (S&P 500,
 Traducción: **Tu fondo de retiro podría terminar comprando acciones de la empresa fusionada**.
 
 ## Por qué importa para México
+
+![Tres flujos de energía convergiendo en una luz central representando la fusión](/images/posts/musk-fusion-merger.webp)
 
 1. **Starlink ya opera en México** — Más integración vertical afecta precios
 2. **El precedente de fusiones tech** — Más consolidación viene

@@ -9,6 +9,8 @@ tags: ['OpenAI', 'AGI', 'Sam Altman', 'inteligencia artificial general', 'ChatGP
 
 ## La noticia
 
+![CEO de tech dando discurso con cerebro de IA holográfico detrás](/images/posts/altman-agi-speech.webp)
+
 En una entrevista con Forbes, Sam Altman, CEO de OpenAI, declaró:
 
 > "Básicamente hemos construido AGI, o estamos muy cerca de hacerlo."
@@ -16,6 +18,8 @@ En una entrevista con Forbes, Sam Altman, CEO de OpenAI, declaró:
 Días después, se retractó parcialmente.
 
 ## El contexto
+
+![Concepto de AGI, cerebro digital brillante con capacidades infinitas](/images/posts/altman-agi-brain.webp)
 
 AGI (Artificial General Intelligence) es el santo grial de la IA: una inteligencia artificial que puede hacer **cualquier tarea cognitiva** que un humano puede hacer.
 
@@ -40,6 +44,8 @@ Altman aclaró después:
 - El hype vende
 
 ## La realidad para negocios
+
+![Oficina moderna con robots y humanos trabajando juntos en automatización](/images/posts/altman-agi-business.webp)
 
 Independientemente de si tenemos AGI o no:
 

@@ -13,6 +13,8 @@ OpenAI acaba de lanzar **GPT-5.3-Codex**, su nuevo modelo especializado en progr
 
 Lo más impactante: es el primer modelo que **"fue instrumental en crearse a sí mismo"**.
 
+![Red neuronal de IA con flujos de código conectando nodos brillantes](/images/posts/gpt-5-codex-neural.webp)
+
 ## Qué significa esto
 
 Según OpenAI, el equipo de Codex usó versiones tempranas del modelo para:
@@ -22,6 +24,8 @@ Según OpenAI, el equipo de Codex usó versiones tempranas del modelo para:
 - **Diagnosticar resultados de pruebas y evaluaciones**
 
 En palabras de OpenAI: *"Nuestro equipo quedó impresionado por cuánto Codex pudo acelerar su propio desarrollo."*
+
+![Loop infinito de retroalimentación donde la IA mejora su propio código](/images/posts/gpt-5-codex-loop.webp)
 
 ## No es Skynet (todavía)
 
@@ -33,6 +37,8 @@ Es un loop de retroalimentación positiva que va a acelerar todo.
 
 ## Por qué importa para México y LATAM
 
+![Desarrollador trabajando junto a un asistente de IA holográfico](/images/posts/gpt-5-codex-dev.webp)
+
 Si eres desarrollador o tienes un equipo técnico:
 
 1. **Codex va a cambiar cómo se programa** — El modelo está optimizado para coding
@@ -40,6 +46,8 @@ Si eres desarrollador o tienes un equipo técnico:
 3. **Los devs senior serán más productivos** — Menos debugging manual
 
 ## El futuro del desarrollo
+
+![Gráfica de crecimiento exponencial mostrando la aceleración de las capacidades de IA](/images/posts/gpt-5-codex-growth.webp)
 
 Estamos entrando a una era donde:
 
