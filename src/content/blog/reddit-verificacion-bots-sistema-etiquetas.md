@@ -27,6 +27,8 @@ Pero otros son problemáticos:
 
 Hasta ahora, **no había forma clara de distinguirlos**.
 
+![Multitud de avatares digitales con algunos rostros de robot mezclados, representando el desafío de distinguir humanos de bots](/images/posts/reddit-humans-vs-bots.webp)
+
 ## Cómo funcionará
 
 El nuevo sistema incluirá:
@@ -35,11 +37,15 @@ El nuevo sistema incluirá:
 2. **Etiquetas visibles** — Los bots verificados tendrán una marca junto a su nombre
 3. **Categorías** — Se identificará el propósito del bot (moderación, utilidad, etc.)
 
+![Interfaz de Reddit mostrando cuentas con insignias de verificación de bot](/images/posts/reddit-bot-verification.webp)
+
 ## Por qué importa
 
 Las redes sociales tienen un problema de autenticidad. Con la IA generando contenido cada vez más realista, distinguir humanos de bots se vuelve crítico.
 
 Reddit está tomando la delantera en **transparencia algorítmica**.
+
+![Contraste entre bots útiles brillando en verde y bots maliciosos de spam en rojo](/images/posts/reddit-good-vs-bad-bots.webp)
 
 ## Implicaciones para otras plataformas
 
@@ -54,6 +60,8 @@ Si funciona, podríamos ver sistemas similares en:
 Con herramientas como ChatGPT, crear bots convincentes es trivial. Una persona puede operar cientos de cuentas que parecen humanas.
 
 El sistema de Reddit es una respuesta directa a esta realidad.
+
+![Concepto de transparencia mostrando mecanismos digitales detrás de cuentas de redes sociales](/images/posts/reddit-transparency.webp)
 
 ## El takeaway
 

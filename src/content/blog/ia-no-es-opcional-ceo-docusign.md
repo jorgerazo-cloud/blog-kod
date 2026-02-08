@@ -15,6 +15,8 @@ tags: ['Docusign', 'inteligencia artificial', 'transformación digital', 'estrat
 
 Docusign: empresa de **$7 mil millones USD en revenue anual**, líder mundial en firmas electrónicas.
 
+![CEO ejecutivo dando entrevista en oficina corporativa moderna con vista a la ciudad](/images/posts/docusign-ceo-interview.webp)
+
 ## El contexto
 
 En 2025, las empresas que integraron IA vieron:
@@ -24,6 +26,8 @@ En 2025, las empresas que integraron IA vieron:
 - Ventaja competitiva real
 
 **Las que no lo hicieron... se quedaron atrás.**
+
+![Contraste entre oficina moderna con IA brillante y activa vs oficina obsoleta oscura y vacía](/images/posts/docusign-ai-vs-no-ai.webp)
 
 ## La nueva realidad
 
@@ -47,6 +51,8 @@ Una empresa de firmas electrónicas (básicamente PDFs) ahora usa IA para:
 
 **Si Docusign necesita IA... tu negocio también.**
 
+![Contrato digital en tablet con análisis de IA resaltando áreas de riesgo y sugerencias](/images/posts/docusign-ai-contracts.webp)
+
 ## La pregunta clave
 
 No es: ¿Debería usar IA?
@@ -54,6 +60,8 @@ No es: ¿Debería usar IA?
 **Es: ¿Cómo puedo implementar IA antes que mi competencia?**
 
 El costo de NO actuar es perder mercado. Cada día que pasa sin IA es un día de ventaja para quien sí la usa.
+
+![Reloj de arena con símbolos de IA representando la urgencia de adoptar tecnología](/images/posts/docusign-ai-urgency.webp)
 
 ## El takeaway
 

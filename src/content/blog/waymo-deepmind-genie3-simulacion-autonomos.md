@@ -23,6 +23,8 @@ Los autos autónomos tienen un problema fundamental:
 
 Waymo ya opera **2 millones de millas por semana** en ciudades estadounidenses, pero aún así hay escenarios que simplemente no encuentran.
 
+![Auto autónomo en laboratorio de simulación con pantallas mostrando escenarios sintéticos generados](/images/posts/waymo-simulation-lab.webp)
+
 ## La solución: Genie 3
 
 Genie 3 es un "world model" de DeepMind — un modelo de IA que entiende cómo funciona el mundo físico y puede **generar realidades alternativas coherentes**.
@@ -44,6 +46,8 @@ Lo más impresionante es la creatividad de los escenarios:
 
 Básicamente, cualquier "edge case" que puedas imaginar.
 
+![Golden Gate Bridge cubierto de nieve y hielo, desde la perspectiva de un auto autónomo](/images/posts/waymo-golden-gate-snow.webp)
+
 ## Los números
 
 | Métrica | Valor |
@@ -59,6 +63,8 @@ Básicamente, cualquier "edge case" que puedas imaginar.
 2. **Menos costo** — Simular es más barato que conducir
 3. **Más escenarios** — Pueden probar situaciones imposibles
 4. **Más rápido** — No dependen de encontrar casos raros
+
+![Comparación entre conducción en calle real y entorno virtual simulado, pantalla dividida](/images/posts/waymo-real-vs-synthetic.webp)
 
 ## Más allá de los autos
 
@@ -87,6 +93,8 @@ El futuro del entrenamiento de IA autónoma no está en las calles.
 Está en los servidores.
 
 Y Waymo acaba de demostrar que funciona.
+
+![Datacenter masivo con servidores que entrenan vehículos autónomos de forma sintética](/images/posts/waymo-datacenter-training.webp)
 
 ---
 

@@ -15,6 +15,8 @@ Pero hay un giro: están **presionando a Nasdaq y S&P para saltarse el periodo d
 
 ¿Por qué importa? Porque los fondos indexados compran automáticamente.
 
+![Cohete SpaceX lanzándose con edificio de Wall Street en el fondo, fusionando exploración espacial con finanzas](/images/posts/spacex-ipo-launch.webp)
+
 ## Cómo funciona
 
 Normalmente, una empresa debe esperar meses después de su IPO para entrar al S&P 500 o Nasdaq 100.
@@ -24,6 +26,8 @@ Normalmente, una empresa debe esperar meses después de su IPO para entrar al S&
 Los fondos indexados (401k, ETFs, fondos de retiro) **TIENEN que comprar acciones automáticamente**.
 
 Demanda garantizada. Precio inflado.
+
+![Gráfico de fondo de retiro mostrando inversiones automáticas fluyendo hacia acciones espaciales](/images/posts/spacex-retirement-funds.webp)
 
 ## El contexto
 
@@ -35,6 +39,8 @@ Recuerda:
 Musk fusionó las 3 empresas.
 
 **Ahora quiere que tu fondo de retiro ayude a financiar sus pérdidas en IA.**
+
+![Tres sedes corporativas fusionándose en una, representando la unión de SpaceX, xAI y X](/images/posts/spacex-xai-x-merger.webp)
 
 ## Por qué es controversial
 
@@ -57,6 +63,8 @@ Si lo aprueban:
 - Los fondos de retiro tendrán menos control
 
 **El IPO podría ser el más grande de la historia.**
+
+![Edificio Nasdaq con banner de IPO brillando de noche, multitud de inversionistas mirando hacia arriba](/images/posts/spacex-nasdaq-ipo.webp)
 
 ## El takeaway
 
