@@ -3,7 +3,7 @@ title: "T-Mobile Lanza Traducción en Tiempo Real con IA Integrada en su Red"
 description: "Sin apps, sin data centers externos: T-Mobile integra IA directamente en su infraestructura de red para traducir llamadas en vivo. El futuro de las telecomunicaciones."
 pubDate: 2026-02-13
 author: "KÖD"
-image: "/images/posts/tmobile-traduccion-ia-2026.jpg"
+heroImage: "/images/posts/tmobile-traduccion-ia-2026.jpg"
 tags: ["T-Mobile", "Telecomunicaciones", "Traducción IA", "Redes", "5G"]
 category: "Telecomunicaciones"
 featured: false

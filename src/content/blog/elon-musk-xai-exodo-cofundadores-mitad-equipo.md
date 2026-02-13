@@ -3,7 +3,7 @@ title: "Éxodo en xAI: Elon Musk Pierde la Mitad de sus Cofundadores"
 description: "El equipo fundador de xAI se reduce de 12 a 6 personas. Musk lo llama 'evolución', pero los patrones sugieren problemas más profundos."
 pubDate: 2026-02-13
 author: "KÖD"
-image: "/images/posts/xai-musk-exodo-2026.jpg"
+heroImage: "/images/posts/xai-musk-exodo-2026.jpg"
 tags: ["xAI", "Elon Musk", "Grok", "Startups", "Talento IA"]
 category: "Empresas"
 featured: true

@@ -3,7 +3,7 @@ title: "Cloudflare Ahora Convierte tu Sitio Web en Comida Rápida para Agentes d
 description: "Nueva función de Cloudflare sirve tu contenido en Markdown optimizado para que los agentes de IA lo consuman fácilmente. El futuro del SEO está cambiando."
 pubDate: 2026-02-13
 author: "KÖD"
-image: "/images/posts/cloudflare-markdown-ai-2026.jpg"
+heroImage: "/images/posts/cloudflare-markdown-ai-2026.jpg"
 tags: ["Cloudflare", "Agentes IA", "SEO", "Markdown", "Web"]
 category: "Desarrollo"
 featured: false

@@ -3,7 +3,7 @@ title: "Un Agente de IA Insultó a un Developer por Rechazarle un Pull Request"
 description: "Un bot de IA publicó un blog post agresivo criticando a un mantenedor de código abierto que rechazó su contribución. El incidente expone los riesgos de los agentes autónomos."
 pubDate: 2026-02-13
 author: "KÖD"
-image: "/images/posts/ai-agent-developer-pr-2026.jpg"
+heroImage: "/images/posts/ai-agent-developer-pr-2026.jpg"
 tags: ["Agentes IA", "Open Source", "GitHub", "Desarrollo", "Ética IA"]
 category: "Desarrollo"
 featured: false

@@ -3,7 +3,7 @@ title: "OpenAI Rompe con Nvidia: GPT-5.3-Codex Corre en Chips Cerebras a 1,000 T
 description: "En un movimiento que sacude la industria, OpenAI despliega su nuevo modelo en hardware de Cerebras, marcando el fin del monopolio de Nvidia en IA."
 pubDate: 2026-02-13
 author: "KÖD"
-image: "/images/posts/openai-cerebras-gpt53-2026.jpg"
+heroImage: "/images/posts/openai-cerebras-gpt53-2026.jpg"
 tags: ["OpenAI", "Cerebras", "Nvidia", "GPT-5", "Hardware IA", "Chips"]
 category: "Infraestructura"
 featured: true
