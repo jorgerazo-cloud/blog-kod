@@ -2,7 +2,8 @@
 title: "Microsoft lanzará Copilot automáticamente en Edge al abrir links de Outlook"
 description: "Redmond encuentra otra forma de meter su asistente de IA en tu flujo de trabajo — quieras o no."
 pubDate: 2026-02-28
-heroImage: "/images/posts/microsoft-copilot-edge.jpg"
+heroImage: "/images/posts/copilot-edge-hero.png"
+ogImage: "/images/posts/copilot-edge-hero.png"
 category: "productividad"
 tags: ["microsoft", "copilot", "edge", "outlook", "ia", "productividad"]
 author: "KÖD Agency"
@@ -13,6 +14,8 @@ author: "KÖD Agency"
 Si pensabas que Microsoft ya había encontrado todos los lugares posibles para insertar Copilot, estabas equivocado.
 
 Ahora, cada vez que hagas clic en un link desde Outlook, **Edge abrirá automáticamente un panel de Copilot** al lado.
+
+![Usuario frustrado con demasiadas notificaciones](/images/posts/copilot-frustrated.png)
 
 ## Cómo funciona
 

@@ -2,7 +2,8 @@
 title: "Veracode: La IA está haciendo la seguridad inalcanzable"
 description: "Nuevo reporte revela que el desarrollo acelerado con IA genera más vulnerabilidades de las que se pueden corregir."
 pubDate: 2026-02-28
-heroImage: "/images/posts/veracode-ia-seguridad.jpg"
+heroImage: "/images/posts/veracode-security-hero.png"
+ogImage: "/images/posts/veracode-security-hero.png"
 category: "seguridad"
 tags: ["veracode", "seguridad", "vulnerabilidades", "desarrollo", "vibe coding", "ia"]
 author: "KÖD Agency"
@@ -11,6 +12,8 @@ author: "KÖD Agency"
 # La brecha de seguridad que nadie quiere ver
 
 Veracode acaba de soltar una bomba: el desarrollo de software impulsado por IA está creando **más vulnerabilidades de las que los equipos pueden corregir**.
+
+![Desarrollador revisando código con errores de seguridad](/images/posts/veracode-developer.png)
 
 ## Los números que preocupan
 

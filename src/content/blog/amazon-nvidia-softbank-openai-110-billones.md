@@ -2,7 +2,8 @@
 title: "Amazon, Nvidia y SoftBank inyectan $110 mil millones a OpenAI"
 description: "Las tres tech giants cierran mega inversión histórica en el creador de ChatGPT, mientras la carrera por la IA generativa se intensifica."
 pubDate: 2026-02-28
-heroImage: "/images/posts/openai-nvidia-softbank-inversion.jpg"
+heroImage: "/images/posts/openai-inversion-hero.png"
+ogImage: "/images/posts/openai-inversion-hero.png"
 category: "inversiones"
 tags: ["openai", "nvidia", "amazon", "softbank", "inversión", "chatgpt", "ia generativa"]
 author: "KÖD Agency"
@@ -11,6 +12,8 @@ author: "KÖD Agency"
 # La inversión más grande en la historia de la IA
 
 OpenAI acaba de cerrar lo que podría ser la ronda de financiamiento más importante en la historia de la tecnología: **$110 mil millones de dólares** provenientes de Amazon, Nvidia y SoftBank.
+
+![Chips Nvidia AI para datacenters](/images/posts/openai-nvidia-chips.png)
 
 ## Los jugadores detrás del deal
 
@@ -22,6 +25,8 @@ El fabricante de chips que domina el mercado de GPUs para IA dobla su apuesta. N
 
 ### SoftBank
 Masayoshi Son, conocido por sus mega inversiones en tecnología, vuelve a hacer una apuesta ambiciosa después de los tropiezos con WeWork y otras startups del Vision Fund.
+
+![Datacenter AWS de Amazon](/images/posts/openai-aws-datacenter.png)
 
 ## ¿Qué significa para el mercado?
 

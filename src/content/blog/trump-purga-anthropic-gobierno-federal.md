@@ -2,7 +2,8 @@
 title: "Trump ordena purga de Anthropic del gobierno federal"
 description: "La administración Trump exige eliminar los sistemas de Claude AI de todas las agencias federales tras el conflicto con el Pentágono."
 pubDate: 2026-02-28
-heroImage: "/images/posts/trump-anthropic-purga.jpg"
+heroImage: "/images/posts/trump-anthropic-hero.png"
+ogImage: "/images/posts/trump-anthropic-hero.png"
 category: "política"
 tags: ["trump", "anthropic", "claude", "gobierno", "pentágono", "regulación", "ia"]
 author: "KÖD Agency"
@@ -11,6 +12,8 @@ author: "KÖD Agency"
 # El gobierno de EE.UU. le declara la guerra a Anthropic
 
 En una escalada sin precedentes del conflicto entre Silicon Valley y Washington, la administración Trump ha ordenado una **purga completa de los sistemas de Anthropic** de todas las agencias del gobierno federal.
+
+![Pentágono sede del Departamento de Defensa](/images/posts/trump-pentagon.png)
 
 ## El origen del conflicto
 

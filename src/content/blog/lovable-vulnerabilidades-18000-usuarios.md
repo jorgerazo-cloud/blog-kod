@@ -2,7 +2,8 @@
 title: "App de Lovable expone datos de 18,000 usuarios por fallas básicas"
 description: "Investigador descubre vulnerabilidades críticas en aplicación construida con plataforma de vibe coding. ¿Quién tiene la culpa?"
 pubDate: 2026-02-28
-heroImage: "/images/posts/lovable-vulnerabilidades.jpg"
+heroImage: "/images/posts/lovable-vuln-hero.png"
+ogImage: "/images/posts/lovable-vuln-hero.png"
 category: "seguridad"
 tags: ["lovable", "vibe coding", "vulnerabilidades", "seguridad", "desarrollo", "ia"]
 author: "KÖD Agency"
@@ -11,6 +12,8 @@ author: "KÖD Agency"
 # El lado oscuro del vibe coding
 
 Una aplicación construida con Lovable — la popular plataforma de desarrollo por IA — acaba de exponer los datos de **18,000 usuarios** debido a vulnerabilidades de seguridad básicas.
+
+![Vibe coding con IA en laptop moderna](/images/posts/lovable-vibe-coding.png)
 
 ## Qué pasó
 
