@@ -1,6 +1,7 @@
 ---
 title: "NanoClaw: La Versión Segura de OpenClaw Que Corre en Contenedores"
 description: "Una alternativa más pequeña y consciente de la seguridad a la popular plataforma de agentes de IA, diseñada para quienes necesitan control total sobre sus deployments."
+heroImage: "/images/posts/nanoclaw-containers.jpg"
 pubDate: 2026-03-02
 author: "KÖD Agency"
 image: "/images/posts/nanoclaw-openclaw-contenedores.jpg"

@@ -1,6 +1,7 @@
 ---
 title: "OpenAI Firma Acuerdo Histórico con Pentágono: IA en Redes Militares Clasificadas"
 description: "Sam Altman anuncia que OpenAI desplegará sus modelos en la red clasificada del Departamento de Defensa, pero con 'guardrails' específicos sobre armas autónomas y vigilancia."
+heroImage: "/images/posts/openai-pentagon-red.jpg"
 pubDate: 2026-03-02
 author: "KÖD Agency"
 image: "/images/posts/openai-pentagon-acuerdo.jpg"

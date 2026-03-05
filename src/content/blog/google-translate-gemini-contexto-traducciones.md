@@ -1,6 +1,7 @@
 ---
 title: "Google Translate Ahora Usa Gemini Para Traducciones con Contexto Real"
 description: "La herramienta de traducción más usada del mundo integra IA generativa para ofrecer traducciones alternativas basadas en contexto, con nuevos botones 'Entender' y 'Preguntar'."
+heroImage: "/images/posts/google-translate-gemini.jpg"
 pubDate: 2026-03-02
 author: "KÖD Agency"
 image: "/images/posts/google-translate-gemini-contexto.jpg"

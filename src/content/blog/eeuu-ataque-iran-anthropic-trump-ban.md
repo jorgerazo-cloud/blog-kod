@@ -1,6 +1,7 @@
 ---
 title: "EE.UU. Usó IA de Anthropic Para Atacar Irán... Horas Después del Ban de Trump"
 description: "En un giro irónico, el gobierno de Trump utilizó Claude de Anthropic para planificar ataques contra Irán apenas horas después de ordenar que todas las agencias federales dejaran de usar sus herramientas de IA."
+heroImage: "/images/posts/eeuu-iran-anthropic.jpg"
 pubDate: 2026-03-02
 author: "KÖD Agency"
 image: "/images/posts/eeuu-ataque-iran-anthropic-trump.jpg"

@@ -1,6 +1,7 @@
 ---
 title: "Altman Advierte: Pentágono Sentó 'Precedente Peligroso' al Vetar a Anthropic"
 description: "El CEO de OpenAI critica las tácticas del gobierno contra Anthropic mientras firma su propio acuerdo militar, generando debate sobre el futuro de la IA en defensa."
+heroImage: "/images/posts/altman-pentagon-precedente.jpg"
 pubDate: 2026-03-02
 author: "KÖD Agency"
 image: "/images/posts/altman-anthropic-pentagon-precedente.jpg"
