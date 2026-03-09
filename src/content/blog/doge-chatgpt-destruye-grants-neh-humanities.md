@@ -2,7 +2,7 @@
 title: "DOGE Usó ChatGPT para Destruir Becas de Humanidades: Así Funciona el Gobierno IA de Trump"
 description: "El equipo de Elon Musk alimentó resúmenes de internet a ChatGPT con un prompt simple para decidir qué grants del NEH cancelar. Los resultados fueron devastadores y absurdos."
 pubDate: 2026-03-09
-heroImage: "/images/posts/doge-chatgpt-neh-grants-2026.webp"
+heroImage: "/images/posts/doge-chatgpt-neh-2026.webp"
 category: "Política IA"
 tags: ["doge", "chatgpt", "openai", "trump", "neh", "humanidades", "gobierno"]
 author: "KÖD Editorial"

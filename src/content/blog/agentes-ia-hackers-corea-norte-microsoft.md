@@ -2,7 +2,7 @@
 title: "Agentes de IA Ahora Ayudan a Hackers de Corea del Norte a Gestionar Ciberataques"
 description: "Microsoft revela que grupos de hackers estatales, incluyendo Corea del Norte, están usando agentes de IA para automatizar y escalar sus operaciones de ciberespionaje."
 pubDate: 2026-03-09
-heroImage: "/images/posts/hackers-ia-corea-norte-2026.webp"
+heroImage: "/images/posts/hackers-corea-ia-2026.webp"
 category: "Ciberseguridad"
 tags: ["ciberseguridad", "corea del norte", "hackers", "microsoft", "agentes", "ia"]
 author: "KÖD Editorial"

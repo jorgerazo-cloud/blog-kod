@@ -2,7 +2,7 @@
 title: "Jefa de Robótica de OpenAI Renuncia por Acuerdo con el Pentágono: 'Autonomía Letal Sin Autorización Humana'"
 description: "Caitlin Kalinowski, head de robótica de OpenAI, dejó la empresa citando preocupaciones sobre vigilancia masiva y armas autónomas letales en el acuerdo militar."
 pubDate: 2026-03-09
-heroImage: "/images/posts/openai-robotics-renuncia-pentagon-2026.webp"
+heroImage: "/images/posts/openai-robotics-renuncia-2026.webp"
 category: "Industria IA"
 tags: ["openai", "pentágono", "robótica", "militar", "ética", "renuncia"]
 author: "KÖD Editorial"
