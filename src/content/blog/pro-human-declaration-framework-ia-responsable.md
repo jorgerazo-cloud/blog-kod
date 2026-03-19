@@ -1,6 +1,7 @@
 ---
 title: "Pro-Human Declaration: el manifiesto bipartidista que pide pausar la superinteligencia"
 description: "Cientos de expertos, ex-funcionarios y figuras públicas firmaron un documento que exige prohibir el desarrollo de superinteligencia hasta tener consenso científico y democrático."
+heroImage: "/images/posts/pro-human-declaration.webp"
 pubDate: 2026-03-08
 
 category: "Ética"

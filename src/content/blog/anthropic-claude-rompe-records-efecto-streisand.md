@@ -1,6 +1,7 @@
 ---
 title: "Efecto Streisand: Claude rompe récords de descargas tras conflicto con el Pentágono"
 description: "La designación de Anthropic como 'riesgo de cadena de suministro' por el Pentágono ha provocado el efecto contrario: demanda histórica de Claude en todo el mundo."
+heroImage: "/images/posts/anthropic-efecto-streisand.webp"
 pubDate: 2026-03-07
 author: "KÖD Agency"
 image: "/images/posts/anthropic-claude-records-downloads.webp"

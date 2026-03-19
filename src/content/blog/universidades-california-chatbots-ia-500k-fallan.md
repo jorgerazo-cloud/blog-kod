@@ -1,6 +1,7 @@
 ---
 title: "California gasta $500,000 al año en chatbots de IA que no saben ni el nombre de su propio presidente"
 description: "Tres community colleges de California invierten medio millón de dólares anuales en chatbots de IA para estudiantes que fallan en preguntas básicas."
+heroImage: "/images/posts/california-chatbots-fail.webp"
 pubDate: 2026-03-07
 author: "KÖD Agency"
 image: "/images/posts/california-chatbots-university-fail.webp"

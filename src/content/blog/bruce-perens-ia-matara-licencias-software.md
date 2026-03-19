@@ -1,6 +1,7 @@
 ---
 title: "Bruce Perens advierte: La IA está destruyendo las licencias de software como las conocemos"
 description: "El cofundador del movimiento Open Source alerta que la IA generativa hace imposible el cumplimiento de licencias, amenazando tanto al software libre como al comercial."
+heroImage: "/images/posts/bruce-perens-licencias.webp"
 pubDate: 2026-03-07
 author: "KÖD Agency"
 image: "/images/posts/bruce-perens-ia-licencias-software.webp"

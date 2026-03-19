@@ -1,6 +1,7 @@
 ---
 title: "Google abre AI Center en Berlín: €5.5 mil millones para dominar la IA en Europa"
 description: "Google inauguró su centro de inteligencia artificial en Berlín con inversión masiva, partnerships con universidades alemanas y proyectos de gobierno digital. Europa entra al juego."
+heroImage: "/images/posts/google-berlin-ai-center.webp"
 pubDate: 2026-03-08
 
 category: "Empresas"

@@ -1,6 +1,7 @@
 ---
 title: "ChatGPT Health falla en 1 de cada 2 urgencias vitales, revela estudio de Nature Medicine"
 description: "Una investigación independiente demuestra que el asistente de salud de OpenAI recomienda esperar en casos que requieren atención inmediata. Los resultados son alarmantes."
+heroImage: "/images/posts/chatgpt-health-urgencias.webp"
 pubDate: 2026-03-08
 
 category: "Salud"

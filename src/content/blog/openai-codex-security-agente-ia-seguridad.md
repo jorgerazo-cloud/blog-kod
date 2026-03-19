@@ -1,6 +1,7 @@
 ---
 title: "OpenAI lanza Codex Security: El agente IA que encuentra vulnerabilidades en tu código"
 description: "OpenAI presenta un nuevo agente de IA especializado en detectar y corregir fallos de seguridad en aplicaciones, disponible también para desarrolladores open source."
+heroImage: "/images/posts/openai-codex-security.webp"
 pubDate: 2026-03-07
 author: "KÖD Agency"
 image: "/images/posts/openai-codex-security-hero.webp"

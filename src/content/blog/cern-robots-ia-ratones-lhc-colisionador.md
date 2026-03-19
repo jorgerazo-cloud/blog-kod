@@ -1,6 +1,7 @@
 ---
 title: "CERN envía ratones robot con IA a patrullar los 27 km del Gran Colisionador de Hadrones"
 description: "El laboratorio de física de partículas más grande del mundo está usando robots autónomos entrenados con IA para inspeccionar los tubos de vacío del LHC."
+heroImage: "/images/posts/cern-robots-ratones.webp"
 pubDate: 2026-03-07
 author: "KÖD Agency"
 image: "/images/posts/cern-robot-mice-lhc.webp"

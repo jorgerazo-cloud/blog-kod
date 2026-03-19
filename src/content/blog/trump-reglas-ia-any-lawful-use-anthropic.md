@@ -1,6 +1,7 @@
 ---
 title: "Trump impone reglas radicales: empresas de IA deberán permitir 'cualquier uso legal'"
 description: "La administración Trump prepara normativas estrictas que obligarían a OpenAI, Anthropic y otras a permitir cualquier uso legal de sus modelos en contratos gubernamentales."
+heroImage: "/images/posts/trump-ai-rules.webp"
 pubDate: 2026-03-08
 
 category: "Regulación"

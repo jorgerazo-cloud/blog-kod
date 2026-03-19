@@ -1,6 +1,7 @@
 ---
 title: "HONOR Robot Phone: el smartphone que se mueve como un robot con IA integrada"
 description: "En el MWC 2026 de Barcelona, HONOR presentó un teléfono revolucionario que combina IA avanzada con movimientos robóticos reales. El futuro de la interacción móvil está aquí."
+heroImage: "/images/posts/honor-robot-phone.webp"
 pubDate: 2026-03-08
 
 category: "Hardware"
