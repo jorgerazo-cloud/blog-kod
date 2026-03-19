@@ -176,7 +176,8 @@ const section = category ? sectionMap[category] || category : 'Tecnología';
 
       /* Main Layout */
       .article-layout {
-        display: block;
+        display: flex;
+        flex-direction: column;
         max-width: 720px;
         margin: 0 auto;
         padding: 1.5rem 1rem;
@@ -190,10 +191,11 @@ const section = category ? sectionMap[category] || category : 'Tecnología';
 
       @media (min-width: 1200px) {
         .article-layout {
-          display: grid;
-          grid-template-columns: 1fr 720px 280px;
-          gap: 2rem;
+          display: flex;
+          flex-direction: row;
           max-width: 1100px;
+          gap: 3rem;
+          padding: 3rem 2rem;
         }
       }
 
@@ -202,8 +204,9 @@ const section = category ? sectionMap[category] || category : 'Tecnología';
       }
 
       .article-content {
+        flex: 1;
         min-width: 0;
-        width: 100%;
+        max-width: 720px;
       }
 
       .article-sidebar-right {
@@ -213,6 +216,8 @@ const section = category ? sectionMap[category] || category : 'Tecnología';
       @media (min-width: 1200px) {
         .article-sidebar-right {
           display: block;
+          width: 280px;
+          flex-shrink: 0;
         }
       }
 
